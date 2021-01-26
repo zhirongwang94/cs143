@@ -1,0 +1,20 @@
+GWAS 
+SNP 
+MLE
+
+Binomial:
+ used to model the number of successes in a sample of size n drawn with replacement from a population of size N. 
+
+Without Replacement: --> Hypergeometric Distribution 
+(If n<<N, then Binomial ~= Hypergeometric Distrbution)
+
+
+Multinomial 
+	Throwing two dies. 
+
+Uniform Distribution:
+	The probability of the event occurring remains the same. 
+
+Poisson Distribution: 
+	expresses the probability of a given number of event occurring in a fixed interval of time/space if these events occur with a known constantt mean rate and independently of the time since the last event. 
+

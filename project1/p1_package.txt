@@ -1,0 +1,1 @@
+docker run -it -v /Users/cho/cs143/:/home/cs143/shared -p 8888:80 --name mysql-apache junghoo/mysql-apache 

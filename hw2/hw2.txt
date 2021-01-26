@@ -1,0 +1,104 @@
+
+
+
+=========================================
+3.a.1
+(SELECT name 
+FROM MovieStar 
+WHERE gender='F') INTERSECT(
+SELECT name 
+FROM MovieExec
+WHERE net worth > 1,000,000
+)
+
+3.a.2
+SELECT MovieStar.name
+FROM MovieStar MovieExec
+WHERE MovieStar.name = MovieExec.name
+  AND net worth > 1,000,1000;
+
+3.b.1
+(SELECT name 
+FROM MovieStar) EXCEPT(
+	(SELECT name 	
+	FROM MovieStar 
+	WHERE gender='F') INTERSECT(
+	SELECT name 
+	FROM MovieExec
+	WHERE net worth > 1,000,000
+	)
+);
+
+3.b.2
+SELECT name
+FROM MovieStar 
+WHERE name NOT IN (
+	SELECT MovieExec.name
+	FROM MovieExec
+);
+
+=========================================
+4.a.
+SELECT AVG(speed)
+FROM Desktop;
+
+
+4.b.
+SELECT AVG(price)
+FROM ComputerProduct
+WHERE manufacturer = 'Dell';
+
+4.c.
+SELECT speed AVG(price)
+FROM Laptop
+WHERE weight > 3;
+
+4.d.
+SELECT speed AVG(price)
+FROM Laptop
+GROUP BY speed;
+
+4.e.
+SELECT manufacturer	
+FROM (
+	SELECT manufacturer count(model)
+	FROM ComputerProduct
+	GROUP BY manufacturer)
+WHERE count(model) >=3;
+
+
+
+=========================================
+
+
+5.A
+INSERT INTO Desktop(model, speed, ran, hdd)
+VALUES(1100, '1.2Ghz', '256MB', '40GB');
+
+
+5.B
+DELETE FROM Desktop 
+WHERE price < 1000 
+  AND model IN (
+	SELECT DISTINCT model 
+	FROM ComputerProduct 
+	WHERE manufacturer = 'IBM'
+); --Why do I need two delete??
+
+
+
+
+
+
+5. C
+UPDATE Laptop 
+SET hdd = hdd -1
+WHERE model in (
+	SELECT DISTINCT model 
+	FROM ComputerProduct 
+	WHERE manufacturer = 'Gateway'
+);
+
+=========================================
+
+

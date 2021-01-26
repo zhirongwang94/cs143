@@ -1,0 +1,19 @@
+Relational Algebra:回顾
+need to learn: 
+	subtraction, union -> symmetry difference
+
+	select,  and, cross product. 
+
+	特别符号那个
+=============================================================
+1. select operation：
+2. project operation:
+3. Composition of relational operations:
+4. Cartesian-product operation:
+5. Join operation:
+6. Set operations:
+7. Assignment operation:
+8. Rename operation:
+9. Equivalent queries(特别符号)：
+
+

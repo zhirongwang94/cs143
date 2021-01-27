@@ -41,13 +41,7 @@ echo "The following is my development of my project2 <br><br>";
 	<input type="submit">
 </form>
 
-<br>
-Keyword you Entered:  <?php echo $_POST["name"]; ?><br>
 <br><br>
-
-
-
-
 
 <!--Database connection -->
 <?php
@@ -57,19 +51,48 @@ if ($db->connect_errno > 0) {
 }
 
 
-// 
-// SELECT * FROM Movie LIMIT 10  where title like %Girl%
-// select * from Movie WHERE title like "%you%" limit 2;
-/* querying database */
+// split the input string into substring by space, and store them in array keywords.
+$keywords = explode(" ", $_POST["name"]);
+$keywords = array_filter($keywords); //filter out empty entry of the arrary
+
+
+// echo input value 
+echo "\$_POST[name]: " . $_POST["name"] . "<br>" ; 
+
+
+// display the keywords. 
+echo "Your enter " . count($keywords) . " keywords:  <br>";
+for ($index = 0; $index < count($keywords); $index++) {
+  echo $index + 1 . ": " . $keywords[$index] . "<br>";
+}
+echo "<br>";
+
+
+
+// Query formatation:
+// SELECT * FROM Movie  WHERE title LIKE %"keyword[0]"% AND %"keyword[1]"% AND %"keyword[2]"% ...
+// eg: SELECT * FROM Movie  WHERE title LIKE %"keyword[0]"% AND %"keyword[1]"% AND %"keyword[2]"% ...
+// eg: SELECT * FROM Movie WHERE title LIKE "%you%" AND title  LIKE "%when%";  ##this is good enough
 $query = "SELECT * FROM Movie ";
-// $query = "SELECT * FROM Movie LIMIT 10 WHERE "  
-echo "the query is: <br>"; 
-echo "" . $query . "WHERE title like \"%"   . $_POST["name"] .  "%\"";    //concatenation used
-echo "<br><br>";
+$query = $query . " WHERE ";
+for ($index = 0; $index < count($keywords); $index++) {
+	if($index == 0){
+		$query = $query . " title LIKE " . "\"%" . $keywords[$index] . "%\" " ;	
+	}
+	else{
+		$query = $query . " AND title LIKE " . "\"%" . $keywords[$index] . "%\" " ;
+	}
+  	//echo "now QUERY IS :" . $query . "<br>";
+}
+echo "THE QUERY IS: " . $query . "<br><br>";
+?>
 
-$query="" . $query . "WHERE title like \"%"   . $_POST["name"] .  "%\"";    //concatenation used
 
-//$query = "" . $query . "WHERE title=%"   . $_POST["name"] .  "%";
+
+
+<h2>Matching Movies are:</h2>
+<!--Display Matching Movies -->
+<?php
 
 $rs = $db->query($query);
 
@@ -81,8 +104,29 @@ while ($row = $rs->fetch_assoc()) {
 }
 print 'Total results: ' . $rs->num_rows;
 $rs->free();
+
+
+reference: 
 ?> 
 
+
+<h2>Matching Actor/Actress are:</h2>
+<!--Display Matching Movies -->
+<?php
+
+$rs = $db->query($query);
+
+while ($row = $rs->fetch_assoc()) { 
+    $id = $row['id']; 
+    $title = $row['title']; 
+    $year = $row['year']; 
+    print "$id, $title, $year<br>"; 
+}
+print 'Total results: ' . $rs->num_rows;
+$rs->free();
+
+
+?> 
 
 
 <br><br><br><br><br><br><br><br><br><br>

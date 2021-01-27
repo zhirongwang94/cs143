@@ -168,63 +168,6 @@ $rs->free();
 
 <br><br><br><br><br><br><br><br><br><br>
 
-<!--This division is for the study of text division -->
-<div class="pagehead">
-
-		<h1>代码狗的BLOG</h1>
-		<pre>爱国、爱党、爱世界</pre>	
-		<pre>"种下去的是代码，收获的是bug"             
-				---码农农场</pre>
-
-</div>
-
-
-<!--This division is for the study of linking (link to) other sites -->
-<div class="menu-outer">
-    <nav> <!-- Navigation tag -->
-	    <ul>  <!--Unordered list tag,  -->
-           <li><a href="home.php">Home</a></li> <!-- a tag, a tag to conatain a hyperlink  -->
-           <li><a href="projects.php">Projects</a></li>
-           <li><a href="notes.php">Notes</a></li>
-           <li><a href="lifes.php">生活</a></li>
-           <li><a href="about.php">About</a></li>
-        </ul>
-   </nav>
-</div>
-
-
-
-<!--Division of Empty Space-->
-<div>
-	<pre>
-		
-
-	</pre>
-</div>
-
-
-<div>
-	<pre>Recent post:</pre>
-</div>
-
-<!--Division of Link to Github-->
-<div>
-	<pre>
-		
-
-	</pre>	
-	<pre>GitHub</pre>
-</div>
-
-
-<!--Division of Tags-->
-<div>	
-	<pre>
-		
-
-	</pre>
-	<h4>TAGS</h4>
-</div>
 
 </body>
 </html>

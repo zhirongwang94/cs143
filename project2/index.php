@@ -33,28 +33,44 @@ echo "The following is my development of my project2 <br><br>";
 
 
 
+<!--Searching Box -->
 <h1>Searching Page</h1>
-
-
 <h2>Search:</h2>
-
-
-<form action="welcome.php" method="post">
+<form action="index.php" method="post">
 	<input type="text" name="name" placeholder="Searching"> <br>
 	<input type="submit">
 </form>
 
-
-
+<br>
+Keyword you Entered:  <?php echo $_POST["name"]; ?><br>
 <br><br>
 
+
+
+
+
+<!--Database connection -->
 <?php
 $db = new mysqli('localhost', 'cs143', '', 'cs143');
 if ($db->connect_errno > 0) { 
     die('Unable to connect to database [' . $db->connect_error . ']'); 
 }
 
-$query = "SELECT * FROM Movie LIMIT 10";
+
+// 
+// SELECT * FROM Movie LIMIT 10  where title like %Girl%
+// select * from Movie WHERE title like "%you%" limit 2;
+/* querying database */
+$query = "SELECT * FROM Movie ";
+// $query = "SELECT * FROM Movie LIMIT 10 WHERE "  
+echo "the query is: <br>"; 
+echo "" . $query . "WHERE title like \"%"   . $_POST["name"] .  "%\"";    //concatenation used
+echo "<br><br>";
+
+$query="" . $query . "WHERE title like \"%"   . $_POST["name"] .  "%\"";    //concatenation used
+
+//$query = "" . $query . "WHERE title=%"   . $_POST["name"] .  "%";
+
 $rs = $db->query($query);
 
 while ($row = $rs->fetch_assoc()) { 

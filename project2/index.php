@@ -118,12 +118,20 @@ echo "THE SECOND QUERY IS: " . $query2 . "<br><br>";
 <!--Display Matching Movies -->
 <h2>Matching Movies are:</h2>
 <?php
+function myMethod() {
+  echo "Hello world!";
+}
+//echo "<a href='projects.php'> Anchor Projects</a>";
 $rs = $db->query($query1);
 while ($row = $rs->fetch_assoc()) { 
     $id = $row['id']; 
     $title = $row['title']; 
     $year = $row['year']; 
-    print "$id, $title, $year<br>"; 
+    print "$id, $title, $year "; 
+//   print "<a href='movie_info.php' onclick='myMethod();'> $title </a>";
+    echo "<a href=movie_info.php?selected_movie_id=" . $id . ">Check This Movie</a>";
+    print "<br>";
+
 }
 print 'Total results: ' . $rs->num_rows;
 $rs->free();
@@ -134,19 +142,25 @@ $rs->free();
 <!--Display Matching Actors/Actresses -->
 <h2>Matching Actors/Actresses are:</h2>
 <?php
+
 $rs = $db->query($query2);
 while ($row = $rs->fetch_assoc()) { 
-    $id = $row['id']; 
     $first = $row['first']; 
     $last = $row['last'];
     $sex = $row['sex'];
     $dob = $row['dob'];
     $dod = $row['dod']; 
-    print "$id, $first, $last, $sex, $dob, $dod <br>"; 
+    $id = $row['id'];  
+    print "$id, $first $last, $sex, $dob, $dod "; 
+    echo "<a href=actor_info.php?selected_actor_id=" . $id . ">Check This Actor/Actress</a>";
+    print "<br>";
 }
 print 'Total results: ' . $rs->num_rows;
 $rs->free();
 
+
+// reference:  passing a value through a
+// https://stackoverflow.com/questions/5440197/how-to-pass-a-php-variable-using-the-url
 ?> 
 
 

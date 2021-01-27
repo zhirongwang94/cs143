@@ -43,7 +43,7 @@ echo "The following is my development of my project2 <br><br>";
 
 <br><br>
 
-<!--Database connection -->
+<!--Database connection and Formating two Queries -->
 <?php
 $db = new mysqli('localhost', 'cs143', '', 'cs143');
 if ($db->connect_errno > 0) { 
@@ -61,41 +61,64 @@ echo "\$_POST[name]: " . $_POST["name"] . "<br>" ;
 
 
 // display the keywords. 
-echo "Your enter " . count($keywords) . " keywords:  <br>";
+echo "Your enter " . count($keywords) . " keywords, which are:  <br>";
 for ($index = 0; $index < count($keywords); $index++) {
   echo $index + 1 . ": " . $keywords[$index] . "<br>";
 }
 echo "<br>";
 
 
+if(count($keywords) == 0){
+	$query1 = "SELECT * FROM Movie WHERE false";
+	$query2 = "SELECT * FROM Movie WHERE false";
+}
+else{
+	// Query1 formatation:
+	// SELECT * FROM Movie  WHERE title LIKE %"keyword[0]"% AND %"keyword[1]"% AND %"keyword[2]"% ...
+	// eg: SELECT * FROM Movie  WHERE title LIKE %"keyword[0]"% AND %"keyword[1]"% AND %"keyword[2]"% ...
+	// eg: SELECT * FROM Movie WHERE title LIKE "%you%" AND title  LIKE "%when%";  ##this is good enough
+	$query1 = "SELECT * FROM Movie ";
+	$query1 = $query1 . " WHERE ";
+	for ($index = 0; $index < count($keywords); $index++) {
+		if($index == 0){
+			$query1 = $query1 . " title LIKE " . "\"%" . $keywords[$index] . "%\" " ;	
+		}
+		else{
+			$query1 = $query1 . " AND title LIKE " . "\"%" . $keywords[$index] . "%\" " ;
+		}
+	  	//echo "now QUERY IS :" . $query . "<br>";
+	}
 
-// Query formatation:
-// SELECT * FROM Movie  WHERE title LIKE %"keyword[0]"% AND %"keyword[1]"% AND %"keyword[2]"% ...
-// eg: SELECT * FROM Movie  WHERE title LIKE %"keyword[0]"% AND %"keyword[1]"% AND %"keyword[2]"% ...
-// eg: SELECT * FROM Movie WHERE title LIKE "%you%" AND title  LIKE "%when%";  ##this is good enough
-$query = "SELECT * FROM Movie ";
-$query = $query . " WHERE ";
-for ($index = 0; $index < count($keywords); $index++) {
-	if($index == 0){
-		$query = $query . " title LIKE " . "\"%" . $keywords[$index] . "%\" " ;	
+
+	// Query1 formatation:
+	// eg: SELECT * FROM Actor WHERE ((first LIKE "%aa%" AND last LIKE "%bb%" ) OR (first LIKE "%bb%" AND last LIKE "%aa%" ))
+	$query2 = "SELECT * FROM Actor ";
+	$query2 = $query2 . " WHERE ";
+	if (count($keywords) == 2){
+		$query2 = $query2 . " ((first LIKE " . "\"%" . $keywords[0] . "%\" "  . 
+		" AND last LIKE  " . "\"%" . $keywords[1] . "%\" ) " . 
+		" OR (first LIKE " . "\"%" . $keywords[1] . "%\" "  . 
+		" AND last LIKE  " . "\"%" . $keywords[0] . "%\" ))" ;
+	}
+	elseif (count($keywords) == 1) {
+		$query2 = $query2 . " first LIKE " . "\"%" . $keywords[0] . "%\" "  . 
+		" OR last LIKE  " . "\"%" . $keywords[0] . "%\" " ;
 	}
 	else{
-		$query = $query . " AND title LIKE " . "\"%" . $keywords[$index] . "%\" " ;
+		$query2 = "";
 	}
-  	//echo "now QUERY IS :" . $query . "<br>";
 }
-echo "THE QUERY IS: " . $query . "<br><br>";
+
+// echo two queries 
+echo "THE FIRST QUERY IS: " . $query1 . "<br><br>";
+echo "THE SECOND QUERY IS: " . $query2 . "<br><br>";
+
 ?>
 
-
-
-
+<!--Display Matching Movies -->
 <h2>Matching Movies are:</h2>
-<!--Display Matching Movies -->
 <?php
-
-$rs = $db->query($query);
-
+$rs = $db->query($query1);
 while ($row = $rs->fetch_assoc()) { 
     $id = $row['id']; 
     $title = $row['title']; 
@@ -105,28 +128,28 @@ while ($row = $rs->fetch_assoc()) {
 print 'Total results: ' . $rs->num_rows;
 $rs->free();
 
-
-reference: 
 ?> 
 
 
-<h2>Matching Actor/Actress are:</h2>
-<!--Display Matching Movies -->
+<!--Display Matching Actors/Actresses -->
+<h2>Matching Actors/Actresses are:</h2>
 <?php
-
-$rs = $db->query($query);
-
+$rs = $db->query($query2);
 while ($row = $rs->fetch_assoc()) { 
     $id = $row['id']; 
-    $title = $row['title']; 
-    $year = $row['year']; 
-    print "$id, $title, $year<br>"; 
+    $first = $row['first']; 
+    $last = $row['last'];
+    $sex = $row['sex'];
+    $dob = $row['dob'];
+    $dod = $row['dod']; 
+    print "$id, $first, $last, $sex, $dob, $dod <br>"; 
 }
 print 'Total results: ' . $rs->num_rows;
 $rs->free();
 
-
 ?> 
+
+
 
 
 <br><br><br><br><br><br><br><br><br><br>

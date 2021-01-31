@@ -18,34 +18,68 @@
 <body class="frontpage">
 
 <h1>Actor Information Page :</h1>
+<h2>Actor Information is :</h2>
+
 <?php
 
 $selected_actor_id = (int)$_GET['selected_actor_id'];
-echo "Selected Actor is : ". $selected_actor_id . "<br>"; //retrieve data
+echo "Selected Actor ID is : ". $selected_actor_id . "<br>"; //retrieve data
 
 
+// connect to database
+$db = new mysqli('localhost', 'cs143', '', 'cs143');
+if ($db->connect_errno > 0) { 
+    die('Unable to connect to database [' . $db->connect_error . ']'); 
+}
 
-// $query3 =  "SELECT * FROM Actor WHERE (last LIKE '%Aaron%' AND first LIKE '%hank%' )";
+// query actor's information
+$query =  "SELECT * FROM Actor WHERE id=" . $selected_actor_id;
+// echo "THE first QUERY IS: " . $query. "<br>";
 
-// $db = new mysqli('localhost', 'cs143', '', 'cs143');
-// if ($db->connect_errno > 0) { 
-//     die('Unable to connect to database [' . $db->connect_error . ']'); 
-// }
+$rs = $db->query($query);
+while ($row = $rs->fetch_assoc()) { 
+    // $id = $row['id']; 
+    $first = $row['first']; 
+    $last = $row['last'];
+    $sex = $row['sex'];
+    $dob = $row['dob'];
+    $dod = $row['dod']; 
+    if(is_null($dod)){
+    	$dod = "Still Alive";
+    }
+    // print "Actor ID: $id, <br>";
+    print "Actor Name: $first $last <br>";
+    print "Sex: $sex <br>";
+    print "Date of Birth: $dob <br>";
+    print "Date of Death: $dod <br>";
+}
+?>
 
 
-// $rs = $db->query($query3);
-// while ($row = $rs->fetch_assoc()) { 
-//     $id = $row['id']; 
-//     $first = $row['first']; 
-//     $last = $row['last'];
-//     $sex = $row['sex'];
-//     $dob = $row['dob'];
-//     $dod = $row['dod']; 
-//     print "$id, ";
-//     print "$last $first, ";
-//     print ", $sex, $dob, $dod <br>"; 
-// }
-// $rs->free();
+<br><br><br>
+<h2>Actor's Movies and Role:</h2>
+<?php
+$query2 =  "SELECT * FROM Movie, Actor, MovieActor" . 
+		  " WHERE MovieActor.aid=" . $selected_actor_id .
+		  " AND MovieActor.mid=Movie.id " .
+		  " AND Actor.id=" . $selected_actor_id;
+
+
+echo "THE last QUERY IS: " . $query2. "<br>";
+
+$rs = $db->query($query2);
+while ($row = $rs->fetch_assoc()) { 
+    $mid = $row['mid']; 
+    $title = $row['title']; 
+    $role = $row['role'];
+
+    print "Movie ID: $mid,   ";
+    print "Movie Title: $title,   ";
+    print "Role: $role <br>";
+
+}
+
+$rs->free();
 
 ?> 
 

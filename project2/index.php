@@ -32,7 +32,6 @@ echo "The following is my development of my project2 <br><br>";
 ?> 
 
 
-
 <!--Searching Box -->
 <h1>Searching Page</h1>
 <h2>Search:</h2>
@@ -42,6 +41,7 @@ echo "The following is my development of my project2 <br><br>";
 </form>
 
 <br><br>
+
 
 <!--Database connection and Formating two Queries -->
 <?php
@@ -115,28 +115,6 @@ echo "THE SECOND QUERY IS: " . $query2 . "<br><br>";
 
 ?>
 
-<!--Display Matching Movies -->
-<h2>Matching Movies are:</h2>
-<?php
-function myMethod() {
-  echo "Hello world!";
-}
-//echo "<a href='projects.php'> Anchor Projects</a>";
-$rs = $db->query($query1);
-while ($row = $rs->fetch_assoc()) { 
-    $id = $row['id']; 
-    $title = $row['title']; 
-    $year = $row['year']; 
-    print "$id, $title, $year "; 
-//   print "<a href='movie_info.php' onclick='myMethod();'> $title </a>";
-    echo "<a href=movie_info.php?selected_movie_id=" . $id . ">Check This Movie</a>";
-    print "<br>";
-
-}
-print 'Total results: ' . $rs->num_rows;
-$rs->free();
-
-?> 
 
 
 <!--Display Matching Actors/Actresses -->
@@ -164,6 +142,28 @@ $rs->free();
 ?> 
 
 
+<!--Display Matching Movies -->
+<h2>Matching Movies are:</h2>
+<?php
+function myMethod() {
+  echo "Hello world!";
+}
+//echo "<a href='projects.php'> Anchor Projects</a>";
+$rs = $db->query($query1);
+while ($row = $rs->fetch_assoc()) { 
+    $id = $row['id']; 
+    $title = $row['title']; 
+    $year = $row['year']; 
+    print "$id, $title, $year "; 
+//   print "<a href='movie_info.php' onclick='myMethod();'> $title </a>";
+    echo "<a href=movie_info.php?selected_movie_id=" . $id . ">Check This Movie</a>";
+    print "<br>";
+
+}
+print 'Total results: ' . $rs->num_rows;
+$rs->free();
+
+?> 
 
 
 <br><br><br><br><br><br><br><br><br><br>

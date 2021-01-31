@@ -59,24 +59,25 @@ while ($row = $rs->fetch_assoc()) {
 <br><br><br>
 <h2>Actor's Movies and Role:</h2>
 <?php
-$query2 =  "SELECT * FROM Movie, Actor, MovieActor" . 
+$query2 =  "SELECT DISTINCT * FROM Movie, Actor, MovieActor" . 
 		  " WHERE MovieActor.aid=" . $selected_actor_id .
 		  " AND MovieActor.mid=Movie.id " .
 		  " AND Actor.id=" . $selected_actor_id;
 
 
-echo "THE last QUERY IS: " . $query2. "<br>";
+// echo "THE last QUERY IS: " . $query2. "<br>";
 
 $rs = $db->query($query2);
 while ($row = $rs->fetch_assoc()) { 
-    $mid = $row['mid']; 
+    $selected_movie_id = $row['mid']; 
     $title = $row['title']; 
     $role = $row['role'];
 
-    print "Movie ID: $mid,   ";
+    // print "Movie ID: $selected_movie_id,   ";
+    print "Role: $role,    ";
     print "Movie Title: $title,   ";
-    print "Role: $role <br>";
-
+    echo "<a href=movie_info.php?selected_movie_id=" . $selected_movie_id . ">Check This Movie</a>";
+    print "<br>";
 }
 
 $rs->free();

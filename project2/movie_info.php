@@ -12,31 +12,12 @@
 				<title>Lifes-代码狗的BLOG</title>
 				</head>
 
-<!-- 
-Movie Information is:
-
-Title :To Wong Foo, Thanks for Everything, Julie Newmar(1995)
-Producer :Amblin Entertainment
-MPAA Rating :PG-13
-Director :
-Genre :Comedy
- -->
-
-<!-- Inside Body, there are a lot of division, one by one, displayed on the site-->
 <body class="frontpage">
+
+
 
 <h1>Movies Information Page :</h1>
 <h2>Movie Information is:</h2>
-<?php
-
-$selected_movie_id = (int)$_GET['selected_movie_id'];
-
-
-echo "Selected movie ID is : ". $selected_movie_id . "<br>"; //retrieve data
-
-?> 
-
-
 
 <!--Database connection and Formating two Queries -->
 <?php
@@ -52,6 +33,10 @@ if ($db->connect_errno > 0) {
 <!--Display Matching Movies Infomation -->
 <?php
 
+$selected_movie_id = (int)$_GET['selected_movie_id'];
+echo "Selected movie ID is : ". $selected_movie_id . "<br>"; //retrieve data
+
+
 $query1 = "SELECT * FROM Movie WHERE id=" . $selected_movie_id;
 // echo "THE FIRST QUERY IS: " . $query1 . "<br>";
 $rs = $db->query($query1);
@@ -60,7 +45,6 @@ while ($row = $rs->fetch_assoc()) {
     $mpaa = $row['rating'];
     $producer = $row['company'];
 }
-
 
 
 $query2 = "SELECT DISTINCT * FROM Director, MovieDirector WHERE Director.id=MovieDirector.did AND MovieDirector.mid=" . $selected_movie_id;
@@ -72,8 +56,6 @@ while ($row = $rs->fetch_assoc()) {
     $d_lname = $row['last'];
     $d_dob = $row['dob'];
     $d_fullname = $d_fname . " " . $d_lname; 
-
-
 }
 
 
@@ -100,12 +82,13 @@ while ($row = $rs->fetch_assoc()) {
 
 
 
- <br> <br> <br> <br> <br>
 
+
+ <br> <br> <br> 
 <h2>Actors in this Movie:</h2>
 <?php
 $query5 = "SELECT DISTINCT * FROM Actor, MovieActor WHERE aid=id AND mid=" . $selected_movie_id;
-echo "THE 5th QUERY IS: " . $query5 . "<br>";
+// echo "THE 5th QUERY IS: " . $query5 . "<br>";
 $rs = $db->query($query5);
 while ($row = $rs->fetch_assoc()) {
 	$selected_actor_id = $row["id"];
@@ -122,8 +105,13 @@ $rs->free();
 ?> 
 
 
+<br> <br> <br> 
+<h2>User Review:</h2>
+<p>Average score for this Movie is 1.1667/5 based on 6 people's reviews</p>>
 
-
+<?php
+echo "<a href=comment.php?rating_movie_id=" . $selected_movie_id . ">Leave Your Review as Well</a>";
+?>
 
 
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>

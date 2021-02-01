@@ -27,17 +27,19 @@
 
 
 
+
 <?php
 echo "The following is my development of my project2 <br><br>";
 ?> 
 
+<a href=comment.php?>Comment Page</a>;
 
 <!--Searching Box -->
 <h1>Searching Page</h1>
 <h2>Search:</h2>
 <form action="index.php" method="post">
 	<input type="text" name="name" placeholder="Searching"> <br>
-	<input type="submit">
+	<input type="submit" value="Click Me!">
 </form>
 
 <br><br>

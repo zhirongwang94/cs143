@@ -84,7 +84,7 @@ while ($row = $rs->fetch_assoc()) {
 
 
 
- <br> <br> <br> 
+<br> <br> <br> 
 <h2>Actors in this Movie:</h2>
 <?php
 $query5 = "SELECT DISTINCT * FROM Actor, MovieActor WHERE aid=id AND mid=" . $selected_movie_id;
@@ -104,17 +104,51 @@ $rs->free();
 
 ?> 
 
+<br> <br><br> 
 
-<br> <br> <br> 
+
+<br> 
 <h2>User Review:</h2>
-<p>Average score for this Movie is 1.1667/5 based on 6 people's reviews</p>>
-
 <?php
-echo "<a href=comment.php?rating_movie_id=" . $selected_movie_id . ">Leave Your Review as Well</a>";
+  $query_score = "SELECT AVG(rating), COUNT(rating) from Review WHERE mid=" . $selected_movie_id;
+  $rs = $db->query($query_score); 
+  while ($row = $rs->fetch_assoc()){
+  	$avg_score = $row['AVG(rating)'];
+  	$cout_score = $row['COUNT(rating)'];
+  	print "Average score for this Movie is $avg_score based on $cout_score people's reviews <br>";
+  }
+  $rs->free();
+  echo "<a href=comment.php?rating_movie_id=" . $selected_movie_id . ">Leave Your Review as Well</a>";
+
 ?>
 
 
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+<br> <br> <br> 
+<h2>Comment details shown below:</h2>
+<?php
+	$query_comment = "SELECT * from Review WHERE mid=" . $selected_movie_id;
+	$rs = $db->query($query_comment);
+	while ($row = $rs->fetch_assoc()){
+		$comment_name = $row['name'];
+		$comment_rate = $row['rating'];
+		$comment_time = $row['time'];
+		$comment = $row['comment'];
+		print "$comment_name rates this movie with score $comment_rate left a review at $comment_time <br>";
+		print "$comment <br>";
+	}
+
+	$rs->free();
+
+?>
+
+
+
+
+
+<br>
+<a href=index.php?>Back to Main Searching Page</a><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 </body>
 </html>
 

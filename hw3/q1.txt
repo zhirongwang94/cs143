@@ -1,0 +1,34 @@
+
+
+CREATE TABLE Driver (
+    name 	varchar(255) 	NOT NULL,
+    phone 	int,		NOT NULL,
+    address  	varchar(255), 	
+    PRIMARY KEY (name, phone)
+);
+
+CREATE TABLE Car (
+    name 	varchar(255) 	NOT NULL,
+    family  	varchar(255)	NOT NULL, 	
+    PRIMARY KEY (name, family)
+);
+
+CREATE TABLE Ride (
+    ID		 int		NOT NULL,
+    driver_name	 varchar(255),
+    driver_phone varchar(255),
+    source	 varchar(255),
+    destination	 varchar(255),
+    distance	 int,
+    name 	varchar(255) 	NOT NULL,
+    family  	varchar(255)	NOT NULL, 	
+    PRIMARY KEY (ID)
+);
+
+
+CREATE TABLE City (
+    name 	varchar(255) 	NOT NULL,
+    tier  	varchar(255),	 
+    ID		int		NOT NULL,	
+    PRIMARY KEY (ID)
+);

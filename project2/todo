@@ -1,4 +1,0 @@
- tar -zcvf web.zip *
-
-docker cp /Users/zhirongwang/desktop/cs143/project2/web.zip mysql-apache:/home/cs143/www/web.zip
-

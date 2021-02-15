@@ -1,0 +1,955 @@
+745, A. Michael, Spence, male, 1943-00-00, 0
+102, Aage N., Bohr, male, 1922-06-19, 2
+779, Aaron, Ciechanover, male, 1947-10-01, 3
+259, Aaron, Klug, male, 1926-08-11, 5
+114, Abdus, Salam, male, 1926-01-29, 7
+982, Abhijit, Banerjee, male, 1961-02-21, 10
+981, Abiy, Ahmed Ali, male, 1976-08-15, 12
+843, Ada E., Yonath, female, 1939-06-22, 13
+866, Adam G., Riess, male, 1969-12-16, 15
+199, Adolf, Butenandt, male, 1903-03-24, 17
+164, Adolf, von Baeyer, male, 1835-10-31, 20
+185, Adolf, Windaus, male, 1876-12-25, 19
+541, Adolfo, Pérez Esquivel, male, 1931-11-26, 23
+292, Ahmed, Zewail, male, 1946-02-26, 24
+853, Akira, Suzuki, male, 1930-09-12, 26
+978, Akira, Yoshino, male, 1948-01-30, 28
+819, Al, Gore, male, 1948-03-31, 15
+729, Alan, Heeger, male, 1936-01-22, 31
+376, Alan, Hodgkin, male, 1914-02-05, 33
+730, Alan, MacDiarmid, male, 1927-04-14, 34
+11, Albert A., Michelson, male, 1852-12-19, 36
+628, Albert, Camus, male, 1913-11-07, 38
+403, Albert, Claude, male, 1898-08-24, 39
+26, Albert, Einstein, male, 1879-03-14, 41
+814, Albert, Fert, male, 1938-03-07, 42
+465, Albert, Gobat, male, 1843-05-21, 44
+519, Albert, Luthuli, male, 1898-00-00, 45
+513, Albert, Schweitzer, male, 1875-01-14, 46
+332, Albert, Szent-Györgyi, male, 1893-09-16, 47
+304, Albrecht, Kossel, male, 1853-09-16, 49
+83, Aleksandr M., Prokhorov, male, 1916-07-11, 51
+644, Alexandr, Solzhenitsyn, male, 1918-12-11, 53
+766, Alexei, Abrikosov, male, 1928-06-25, 52
+306, Alexis, Carrel, male, 1873-06-28, 55
+544, Alfonso, García Robles, male, 1911-03-20, 57
+392, Alfred D., Hershey, male, 1908-12-04, 58
+479, Alfred, Fried, male, 1864-11-11, 60
+450, Alfred G., Gilman, male, 1941-07-01, 61
+87, Alfred, Kastler, male, 1902-05-03, 63
+174, Alfred, Werner, male, 1866-12-12, 65
+892, Alice, Munro, female, 1931-07-10, 67
+417, Allan M., Cormack, male, 1924-02-23, 68
+305, Allvar, Gullstrand, male, 1862-06-05, 70
+300, Alphonse, Laveran, male, 1845-06-18, 64
+543, Alva, Myrdal, female, 1902-01-31, 71
+882, Alvin E., Roth, male, 1951-12-18, 56
+719, Amartya, Sen, male, 1933-11-03, 73
+509, null, null, null, null, null
+537, null, null, null, null, null
+590, Anatole, France, male, 1844-04-16, 64
+360, André F., Cournand, male, 1895-09-24, 64
+849, Andre, Geim, male, 1958-10-21, 74
+618, André, Gide, male, 1869-11-22, 64
+381, André, Lwoff, male, 1902-05-08, 76
+990, Andrea, Ghez, female, 1965-06-16, 56
+534, Andrei, Sakharov, male, 1921-05-21, 78
+377, Andrew, Huxley, male, 1917-11-22, 79
+412, Andrew V., Schally, male, 1926-11-30, 80
+802, Andrew Z., Fire, male, 1959-04-27, 1
+926, Angus, Deaton, male, 1945-10-19, 82
+768, Anthony J., Leggett, male, 1938-03-26, 9
+101, Antony, Hewish, male, 1924-05-11, 85
+538, Anwar, al-Sadat, male, 1918-12-25, 86
+214, Archer J.P., Martin, male, 1910-03-01, 9
+311, Archibald V., Hill, male, 1886-09-26, 87
+891, Arieh, Warshel, male, 1940-11-20, 88
+490, Aristide, Briand, male, 1862-03-28, 89
+208, Arne, Tiselius, male, 1902-08-10, 90
+111, Arno, Penzias, male, 1933-04-26, 21
+960, Arthur, Ashkin, male, 1922-09-02, 56
+920, Arthur B., McDonald, male, 1943-08-29, 92
+33, Arthur H., Compton, male, 1892-09-10, 94
+186, Arthur, Harden, male, 1865-10-12, 75
+499, Arthur, Henderson, male, 1863-09-13, 95
+368, Arthur, Kornberg, male, 1918-03-03, 96
+119, Arthur L., Schawlow, male, 1921-05-05, 97
+203, Artturi, Virtanen, male, 1895-01-15, 98
+722, Arvid, Carlsson, male, 1923-01-25, 71
+310, August, Krogh, male, 1874-11-15, 101
+475, Auguste, Beernaert, male, 1829-07-26, 102
+553, Aung San Suu Kyi, null, female, 1945-06-19, 103
+780, Avram, Hershko, male, 1937-12-31, 104
+923, Aziz, Sancar, male, 1946-09-08, 105
+845, Barack, Obama, male, 1961-08-04, 107
+428, Barbara, McClintock, female, 1902-06-16, 108
+942, Barry C., Barish, male, 1936-01-27, 110
+789, Barry J., Marshall, male, 1951-09-30, 112
+743, Barry, Sharpless, male, 1941-04-28, 35
+409, Baruch S., Blumberg, male, 1925-07-28, 56
+419, Baruj, Benacerraf, male, 1920-10-29, 116
+103, Ben R., Mottelson, male, 1926-07-09, 37
+936, Bengt, Holmström, male, 1949-04-18, 99
+426, Bengt I., Samuelsson, male, 1934-05-21, 117
+933, Bernard L., Feringa, male, 1951-05-18, 118
+345, Bernardo, Houssay, male, 1887-04-10, 23
+445, Bert, Sakmann, male, 1942-06-12, 120
+468, Bertha, von Suttner, female, 1843-06-09, 121
+689, Bertil, Ohlin, male, 1899-04-23, 122
+145, Bertram N., Brockhouse, male, 1918-07-15, 123
+621, Bertrand, Russell, male, 1872-05-18, 125
+535, Betty, Williams, female, 1943-05-22, 126
+572, Bjørnstjerne, Bjørnson, male, 1832-12-08, 127
+937, Bob, Dylan, male, 1941-05-24, 128
+629, Boris, Pasternak, male, 1890-02-10, 78
+99, Brian D., Josephson, male, 1940-01-04, 129
+879, Brian, Kobilka, male, 1955-05-30, 130
+865, Brian P., Schmidt, male, 1967-02-24, 131
+861, Bruce A., Beutler, male, 1957-12-29, 37
+261, Bruce, Merrifield, male, 1921-07-15, 133
+105, Burton, Richter, male, 1931-03-22, 96
+34, C.T.R., Wilson, male, 1869-02-14, 134
+298, Camillo, Golgi, male, 1843-07-07, 135
+666, Camilo José, Cela, male, 1916-05-11, 137
+189, Carl, Bosch, male, 1874-08-27, 138
+343, Carl, Cori, male, 1896-12-05, 139
+43, Carl D., Anderson, male, 1905-09-03, 56
+588, Carl, Spitteler, male, 1845-04-24, 141
+500, Carl, von Ossietzky, male, 1889-10-03, 142
+740, Carl, Wieman, male, 1951-03-26, 143
+124, Carlo, Rubbia, male, 1934-03-31, 145
+562, Carlos Filipe Ximenes, Belo, male, 1948-02-03, 147
+501, Carlos, Saavedra Lamas, male, 1878-11-01, 23
+836, Carol W., Greider, female, 1961-04-15, 148
+55, Cecil, Powell, male, 1903-12-05, 149
+431, César, Milstein, male, 1927-10-08, 150
+384, Charles B., Huggins, male, 1901-09-22, 151
+25, Charles Edouard, Guillaume, male, 1861-02-15, 152
+489, Charles G., Dawes, male, 1865-08-27, 154
+22, Charles Glover, Barkla, male, 1877-06-07, 155
+81, Charles H., Townes, male, 1915-07-28, 157
+269, Charles J., Pedersen, male, 1904-10-03, 158
+838, Charles K., Kao, male, 1933-11-04, 160
+987, Charles, Rice, male, 1952-08-25, 163
+318, Charles, Nicolle, male, 1866-09-21, 164
+307, Charles, Richet, male, 1850-08-26, 64
+68, Chen Ning, Yang, male, 1922-09-22, 166
+319, Christiaan, Eijkman, male, 1858-08-11, 167
+241, Christian, Anfinsen, male, 1916-03-26, 169
+404, Christian, de Duve, male, 1917-10-02, 171
+486, Christian, Lange, male, 1869-09-17, 172
+453, Christiane, Nüsslein-Volhard, female, 1942-10-20, 173
+858, Christopher A., Pissarides, male, 1948-02-20, 175
+873, Christopher A., Sims, male, 1942-10-21, 15
+153, Claude, Cohen-Tannoudji, male, 1933-04-01, 176
+662, Claude, Simon, male, 1913-10-10, 177
+146, Clifford G., Shull, male, 1915-09-23, 178
+44, Clinton, Davisson, male, 1881-10-22, 179
+772, Clive W.J., Granger, male, 1934-09-04, 180
+505, Cordell, Hull, male, 1871-10-02, 181
+333, Corneille, Heymans, male, 1892-03-28, 182
+803, Craig C., Mello, male, 1960-10-19, 61
+657, Czeslaw, Milosz, male, 1911-06-30, 184
+410, D. Carleton, Gajdusek, male, 1923-09-09, 185
+520, Dag, Hammarskjöld, male, 1905-07-29, 186
+857, Dale T., Mortensen, male, 1939-02-02, 187
+867, Dan, Shechtman, male, 1941-01-24, 190
+363, Daniel, Bovet, male, 1907-03-23, 191
+157, Daniel C., Tsui, male, 1939-02-28, 193
+759, Daniel, Kahneman, male, 1934-03-05, 190
+733, Daniel L., McFadden, male, 1937-07-29, 194
+415, Daniel, Nathans, male, 1928-10-30, 159
+674, Dario, Fo, male, 1926-03-24, 196
+406, David, Baltimore, male, 1938-03-07, 56
+423, David H., Hubel, male, 1926-02-27, 197
+776, David J., Gross, male, 1941-02-19, 15
+928, David J., Thouless, male, 1934-09-21, 198
+877, David J., Wineland, male, 1944-02-24, 200
+149, David M., Lee, male, 1931-01-20, 201
+567, David, Trimble, male, 1944-10-15, 126
+966, Denis, Mukwege, male, 1955-03-01, 203
+93, Dennis, Gabor, male, 1900-06-05, 204
+237, Derek, Barton, male, 1918-09-08, 205
+669, Derek, Walcott, male, 1930-01-23, 206
+546, Desmond, Tutu, male, 1931-10-07, 207
+362, Dickinson W., Richards, male, 1895-10-30, 208
+975, Didier, Queloz, male, 1966-02-23, 146
+74, Donald A., Glaser, male, 1926-09-21, 209
+267, Donald J., Cram, male, 1919-04-22, 210
+962, Donna, Strickland, female, 1959-05-27, 211
+817, Doris, Lessing, female, 1919-10-22, 213
+230, Dorothy Crowfoot, Hodgkin, female, 1910-05-12, 214
+150, Douglas D., Osheroff, male, 1945-08-01, 216
+710, Douglass C., North, male, 1920-11-05, 11
+264, Dudley R., Herschbach, male, 1932-06-18, 217
+443, E. Donnall, Thomas, male, 1920-03-15, 218
+59, E. M., Purcell, male, 1912-08-30, 219
+397, Earl W., Sutherland, Jr., male, 1915-11-19, 220
+324, Edgar, Adrian, male, 1889-11-30, 9
+446, Edmond H., Fischer, male, 1920-04-06, 160
+807, Edmund S., Phelps, male, 1933-07-26, 188
+166, Eduard, Buchner, male, 1860-05-20, 222
+905, Edvard I., Moser, male, 1962-04-27, 223
+336, Edward A., Doisy, male, 1893-11-13, 225
+452, Edward B., Lewis, male, 1918-05-20, 226
+349, Edward C., Kendall, male, 1886-03-08, 227
+787, Edward C., Prescott, male, 1940-12-26, 229
+365, Edward, Tatum, male, 1909-12-14, 144
+52, Edward V., Appleton, male, 1892-09-06, 232
+447, Edwin G., Krebs, male, 1918-06-06, 233
+212, Edwin M., McMillan, male, 1907-09-18, 234
+348, Egas, Moniz, male, 1874-11-29, 235
+852, Ei-ichi, Negishi, male, 1935-07-14, 237
+533, Eisaku, Sato, male, 1901-03-27, 239
+782, Elfriede, Jelinek, female, 1946-10-20, 240
+658, Elias, Canetti, male, 1905-07-25, 241
+275, Elias James, Corey, male, 1928-07-12, 242
+464, Élie, Ducommun, male, 1833-02-19, 146
+548, Elie, Wiesel, male, 1928-09-30, 243
+480, Elihu, Root, male, 1845-02-15, 244
+846, Elinor, Ostrom, female, 1933-08-07, 77
+835, Elizabeth H., Blackburn, female, 1948-11-26, 246
+869, Ellen, Johnson Sirleaf, female, 1938-10-29, 248
+161, Emil, Fischer, male, 1852-10-09, 249
+293, Emil, von Behring, male, 1854-03-15, 250
+72, Emilio, Segrè, male, 1905-02-01, 252
+506, Emily Greene, Balch, female, 1867-01-08, 253
+991, Emmanuelle, Charpentier, female, 1968-12-11, 254
+46, Enrico, Fermi, male, 1901-09-29, 192
+909, Eric, Betzig, male, 1960-01-13, 255
+738, Eric, Cornell, male, 1961-12-19, 257
+454, Eric F., Wieschaus, male, 1947-06-08, 258
+724, Eric, Kandel, male, 1929-11-07, 60
+821, Eric S., Maskin, male, 1950-12-12, 56
+604, Erik Axel, Karlfeldt, male, 1864-07-20, 259
+625, Ernest, Hemingway, male, 1899-07-21, 260
+47, Ernest, Lawrence, male, 1901-08-08, 261
+167, Ernest, Rutherford, male, 1871-08-30, 262
+57, Ernest T.S., Walton, male, 1903-10-06, 263
+471, Ernesto Teodoro, Moneta, male, 1833-09-20, 265
+340, Ernst B., Chain, male, 1906-06-19, 19
+244, Ernst Otto, Fischer, male, 1918-11-10, 21
+127, Ernst, Ruska, male, 1906-12-25, 50
+444, Erwin, Neher, male, 1944-03-20, 266
+39, Erwin, Schrödinger, male, 1887-08-12, 60
+983, Esther, Duflo, female, 1972-10-25, 64
+894, Eugene F., Fama, male, 1939-02-14, 72
+608, Eugene, O'Neill, male, 1888-10-16, 56
+78, Eugene, Wigner, male, 1902-11-17, 47
+651, Eugenio, Montale, male, 1896-10-12, 267
+881, null, null, null, null, null
+649, Eyvind, Johnson, male, 1900-07-29, 268
+929, F. Duncan M., Haldane, male, 1951-09-14, 9
+283, F. Sherwood, Rowland, male, 1927-06-28, 269
+556, F.W., de Klerk, male, 1936-03-18, 68
+58, Felix, Bloch, male, 1905-10-23, 66
+379, Feodor, Lynen, male, 1911-04-06, 21
+14, Ferdinand, Braun, male, 1850-06-06, 271
+492, Ferdinand, Buisson, male, 1841-12-20, 64
+460, Ferid, Murad, male, 1936-09-14, 273
+786, Finn E., Kydland, male, 1943-12-01, 275
+963, Frances H., Arnold, female, 1956-07-25, 178
+372, Francis, Crick, male, 1916-06-08, 276
+180, Francis W., Aston, male, 1877-09-01, 277
+699, Franco, Modigliani, male, 1918-06-18, 192
+887, François, Englert, male, 1932-11-06, 278
+380, François, Jacob, male, 1920-06-17, 280
+623, François, Mauriac, male, 1885-10-11, 281
+824, Françoise, Barré-Sinoussi, female, 1947-07-30, 64
+494, Frank B., Kellogg, male, 1856-12-22, 282
+778, Frank, Wilczek, male, 1951-05-15, 56
+613, Frans Eemil, Sillanpää, male, 1888-09-16, 283
+193, Frédéric, Joliot, male, 1900-03-19, 64
+573, Frédéric, Mistral, male, 1830-09-08, 284
+463, Frédéric, Passy, male, 1822-05-20, 64
+358, Frederick C., Robbins, male, 1916-08-25, 285
+313, Frederick G., Banting, male, 1891-11-14, 286
+148, Frederick, Reines, male, 1918-03-16, 288
+222, Frederick, Sanger, male, 1918-08-13, 289
+179, Frederick, Soddy, male, 1877-09-02, 290
+474, Fredrik, Bajer, male, 1837-04-21, 291
+487, Fridtjof, Nansen, male, 1861-10-10, 292
+190, Friedrich, Bergius, male, 1884-10-11, 293
+685, Friedrich, von Hayek, male, 1899-05-08, 60
+508, null, null, null, null, null
+60, Frits, Zernike, male, 1888-07-16, 295
+177, Fritz, Haber, male, 1868-12-09, 296
+355, Fritz, Lipmann, male, 1899-06-12, 297
+181, Fritz, Pregl, male, 1869-09-03, 298
+659, Gabriel, García Márquez, male, 1927-03-06, 300
+12, Gabriel, Lippmann, male, 1845-08-16, 301
+615, Gabriela, Mistral, female, 1889-04-07, 302
+734, Xingjian, Gao, male, 1940-01-04, 303
+708, Gary, Becker, male, 1930-12-02, 304
+245, Geoffrey, Wilkinson, male, 1921-07-14, 305
+371, Georg, von Békésy, male, 1899-06-03, 204
+253, Georg, Wittig, male, 1897-06-16, 19
+744, George A., Akerlof, male, 1940-06-17, 61
+280, George A., Olah, male, 1927-05-22, 204
+364, George, Beadle, male, 1903-10-22, 306
+596, George Bernard, Shaw, male, 1856-07-26, 264
+514, George C., Marshall, male, 1880-12-31, 307
+421, George D., Snell, male, 1903-12-19, 308
+201, George, de Hevesy, male, 1885-08-01, 47
+405, George E., Palade, male, 1912-11-19, 310
+840, George E., Smith, male, 1930-05-10, 311
+805, George F., Smoot, male, 1945-02-20, 313
+439, George H., Hitchings, male, 1905-04-18, 314
+326, George H., Whipple, male, 1878-08-28, 316
+696, George J., Stigler, male, 1911-01-17, 318
+964, George P., Smith, male, 1941-03-10, 319
+45, George Paget, Thomson, male, 1892-05-03, 6
+235, George, Porter, male, 1920-12-06, 321
+327, George R., Minot, male, 1885-12-02, 72
+387, George, Wald, male, 1906-11-18, 56
+142, Georges, Charpak, male, 1924-08-01, 322
+430, Georges J.F., Köhler, male, 1946-04-17, 21
+517, Georges, Pire, male, 1910-02-10, 324
+398, Gerald M., Edelman, male, 1929-07-01, 56
+697, Gerard, Debreu, male, 1921-07-04, 325
+961, Gérard, Mourou, male, 1944-06-22, 326
+158, Gerardus, 't Hooft, male, 1946-07-05, 328
+128, Gerd, Binnig, male, 1947-07-20, 329
+334, Gerhard, Domagk, male, 1895-10-30, 331
+816, Gerhard, Ertl, male, 1936-10-10, 333
+240, Gerhard, Herzberg, male, 1904-12-25, 142
+582, Gerhart, Hauptmann, male, 1862-11-15, 335
+438, Gertrude B., Elion, female, 1918-01-23, 56
+344, Gerty, Cori, female, 1896-08-15, 139
+635, Giorgos, Seferis, male, 1900-03-13, 336
+576, Giosuè, Carducci, male, 1835-07-27, 337
+229, Giulio, Natta, male, 1903-02-26, 338
+213, Glenn T., Seaborg, male, 1912-04-19, 340
+418, Godfrey N., Hounsfield, male, 1919-08-28, 341
+810, null, null, null, null, null
+597, Grazia, Deledda, female, 1871-09-27, 343
+972, Gregg, Semenza, male, 1956-07-12, 56
+13, Guglielmo, Marconi, male, 1874-04-25, 344
+684, Gunnar, Myrdal, male, 1898-12-06, 345
+461, Günter, Blobel, male, 1936-05-21, 346
+676, Günter, Grass, male, 1927-10-16, 347
+17, Gustaf, Dalén, male, 1869-11-30, 348
+31, Gustav, Hertz, male, 1887-07-22, 142
+491, Gustav, Stresemann, male, 1878-05-10, 19
+777, H. David, Politzer, male, 1949-08-31, 56
+389, H. Gobind, Khorana, male, 1922-01-09, 351
+751, H. Robert, Horvitz, male, 1947-05-08, 37
+626, Halldór, Laxness, male, 1902-04-23, 353
+416, Hamilton O., Smith, male, 1931-08-23, 56
+91, Hannes, Alfvén, male, 1908-05-30, 354
+88, Hans, Bethe, male, 1906-07-02, 272
+188, Hans, Fischer, male, 1881-07-27, 355
+136, Hans G., Dehmelt, male, 1922-09-09, 356
+354, Hans, Krebs, male, 1900-08-25, 357
+329, Hans, Spemann, male, 1869-06-27, 359
+187, Hans, von Euler-Chelpin, male, 1873-02-15, 361
+823, Harald, zur Hausen, male, 1936-03-11, 362
+192, Harold C., Urey, male, 1893-04-29, 363
+441, Harold E., Varmus, male, 1939-12-18, 364
+801, Harold, Pinter, male, 1930-10-10, 9
+704, Harry M., Markowitz, male, 1927-08-24, 37
+650, Harry, Martinson, male, 1904-05-06, 365
+272, Hartmut, Michel, male, 1948-07-18, 366
+985, Harvey, Alter, male, 1935-09-12, 56
+18, Heike, Kamerlingh Onnes, male, 1853-09-21, 119
+647, Heinrich, Böll, male, 1917-12-21, 138
+129, Heinrich, Rohrer, male, 1933-06-06, 369
+184, Heinrich, Wieland, male, 1877-06-04, 370
+2, Hendrik A., Lorentz, male, 1853-07-18, 371
+4, Henri, Becquerel, male, 1852-12-15, 64
+600, Henri, Bergson, male, 1859-10-18, 64
+481, Henri, La Fontaine, male, 1854-04-22, 279
+165, Henri, Moissan, male, 1852-09-28, 64
+335, Henrik, Dam, male, 1895-02-21, 2
+587, Henrik, Pontoppidan, male, 1857-07-24, 372
+462, Henry, Dunant, male, 1828-05-08, 146
+530, Henry, Kissinger, male, 1923-05-27, 373
+260, Henry, Taube, male, 1915-11-30, 374
+139, Henry W., Kendall, male, 1926-12-09, 72
+575, Henryk, Sienkiewicz, male, 1846-05-05, 375
+262, Herbert A., Hauptman, male, 1917-02-14, 56
+252, Herbert C., Brown, male, 1912-05-22, 9
+727, Herbert, Kroemer, male, 1928-08-25, 377
+338, Herbert S., Gasser, male, 1888-07-05, 378
+691, Herbert, Simon, male, 1916-06-15, 200
+617, Hermann, Hesse, male, 1877-07-02, 379
+342, Hermann J., Muller, male, 1890-12-21, 56
+216, Hermann, Staudinger, male, 1881-03-23, 380
+844, Herta, Müller, female, 1953-08-17, 381
+731, Hideki, Shirakawa, male, 1936-08-20, 29
+54, Hideki, Yukawa, male, 1907-01-23, 29
+907, Hiroshi, Amano, male, 1960-09-11, 383
+485, Hjalmar, Branting, male, 1860-11-23, 90
+156, Horst L., Störmer, male, 1949-04-06, 329
+408, Howard M., Temin, male, 1934-12-10, 35
+359, Hugo, Theorell, male, 1903-07-06, 384
+71, Igor Y., Tamm, male, 1895-07-08, 385
+721, Il´ja M., Frank, male, 1908-10-23, 386
+301, Ilya, Mechnikov, male, 1845-05-15, 387
+250, Ilya, Prigogine, male, 1917-01-25, 78
+761, Imre, Kertész, male, 1929-11-09, 204
+467, null, null, null, null, null
+818, null, null, null, null, null
+797, null, null, null, null, null
+948, null, null, null, null, null
+564, null, null, null, null, null
+482, null, null, null, null, null
+527, null, null, null, null, null
+547, null, null, null, null, null
+194, Irène, Joliot-Curie, female, 1897-09-12, 64
+191, Irving, Langmuir, male, 1881-01-31, 96
+781, Irwin, Rose, male, 1926-07-16, 96
+654, Isaac Bashevis, Singer, male, 1904-07-14, 390
+906, Isamu, Akasaki, male, 1929-01-30, 391
+49, Isidor Isaac, Rabi, male, 1898-07-29, 392
+606, Ivan, Bunin, male, 1870-10-22, 393
+296, Ivan, Pavlov, male, 1849-09-14, 394
+98, Ivar, Giaever, male, 1929-04-05, 396
+633, Ivo, Andric, male, 1892-10-10, 397
+130, J. Georg, Bednorz, male, 1950-05-16, 398
+80, J. Hans D., Jensen, male, 1907-06-25, 142
+763, J. M., Coetzee, male, 1940-02-09, 399
+440, J. Michael, Bishop, male, 1936-02-22, 400
+930, J. Michael, Kosterlitz, male, 1943-06-22, 401
+790, J. Robin, Warren, male, 1937-06-11, 403
+10, J.J., Thomson, male, 1856-12-18, 404
+592, Jacinto, Benavente, male, 1866-08-12, 405
+728, Jack, Kilby, male, 1923-11-08, 406
+134, Jack, Steinberger, male, 1921-05-25, 407
+837, Jack W., Szostak, male, 1952-11-09, 9
+160, Jacobus H., van 't Hoff, male, 1852-08-30, 408
+944, Jacques, Dubochet, male, 1942-06-08, 409
+382, Jacques, Monod, male, 1910-02-09, 64
+715, James A., Mirrlees, male, 1936-07-05, 411
+204, James B., Sumner, male, 1887-11-19, 412
+41, James, Chadwick, male, 1891-10-20, 75
+116, James, Cronin, male, 1931-09-29, 37
+690, James E., Meade, male, 1907-06-23, 414
+884, James E., Rothman, male, 1950-11-03, 415
+30, James, Franck, male, 1882-08-26, 142
+732, James J., Heckman, male, 1944-04-19, 37
+700, James M., Buchanan Jr., male, 1919-10-03, 416
+958, James P., Allison, male, 1948-08-07, 418
+973, James, Peebles, male, 1935-04-25, 419
+104, James, Rainwater, male, 1917-12-09, 420
+695, James, Tobin, male, 1918-03-05, 421
+373, James, Watson, male, 1928-04-06, 37
+678, Jan, Tinbergen, male, 1903-04-12, 422
+496, Jane, Addams, female, 1860-09-06, 423
+223, Jaroslav, Heyrovsky, male, 1890-12-20, 139
+661, Jaroslav, Seifert, male, 1901-09-23, 139
+32, Jean Baptiste, Perrin, male, 1870-09-30, 425
+420, Jean, Dausset, male, 1916-10-19, 426
+915, Jean, Tirole, male, 1953-08-09, 427
+832, Jean-Marie Gustave, Le Clézio, male, 1940-04-13, 428
+268, Jean-Marie, Lehn, male, 1939-09-30, 429
+637, Jean-Paul, Sartre, male, 1905-06-21, 64
+931, Jean-Pierre, Sauvage, male, 1944-10-21, 64
+938, Jeffrey C., Hall, male, 1945-05-03, 56
+992, Jennifer A., Doudna, female, 1964-02-19, 15
+289, Jens C., Skou, male, 1918-10-08, 432
+138, Jerome I., Friedman, male, 1930-03-28, 37
+263, Jerome, Karle, male, 1918-06-18, 56
+762, Jimmy, Carter, male, 1924-10-01, 433
+945, Joachim, Frank, male, 1940-09-12, 434
+565, Jody, Williams, female, 1950-10-09, 435
+270, Johann, Deisenhofer, male, 1943-09-30, 436
+15, Johannes Diderik, van der Waals, male, 1837-11-23, 368
+316, Johannes, Fibiger, male, 1867-04-23, 437
+24, Johannes, Stark, male, 1874-04-15, 438
+614, Johannes V., Jensen, male, 1873-01-20, 440
+756, John B., Fenn, male, 1917-06-15, 56
+976, John, Goodenough, male, 1922-07-25, 442
+66, John, Bardeen, male, 1908-05-23, 352
+711, John C., Harsanyi, male, 1920-05-29, 204
+227, John C., Kendrew, male, 1917-03-24, 215
+804, John C., Mather, male, 1946-08-07, 443
+266, John C., Polanyi, male, 1929-01-23, 19
+56, John, Cockcroft, male, 1897-05-27, 305
+247, John, Cornforth, male, 1917-09-07, 446
+752, John E., Sulston, male, 1942-03-27, 6
+288, John E., Walker, male, 1941-01-07, 448
+356, John F., Enders, male, 1897-02-10, 449
+712, John F., Nash Jr., male, 1928-06-13, 450
+605, John, Galsworthy, male, 1867-08-14, 451
+205, John H., Northrop, male, 1891-07-05, 185
+109, John H., van Vleck, male, 1899-03-13, 452
+566, John, Hume, male, 1937-01-18, 453
+792, John L., Hall, male, 1934-08-21, 454
+314, John, Macleod, male, 1876-09-06, 455
+903, John, O'Keefe, male, 1939-11-18, 56
+291, John, Pople, male, 1925-10-31, 456
+681, John R., Hicks, male, 1904-04-08, 457
+507, John R., Mott, male, 1865-05-25, 458
+427, John R., Vane, male, 1927-03-29, 459
+634, John, Steinbeck, male, 1902-02-27, 461
+574, José, Echegaray, male, 1832-04-19, 405
+563, José, Ramos-Horta, male, 1949-12-26, 462
+675, José, Saramago, male, 1922-11-16, 463
+664, Joseph, Brodsky, male, 1940-05-24, 464
+442, Joseph E., Murray, male, 1919-04-01, 465
+746, Joseph E., Stiglitz, male, 1943-02-09, 466
+337, Joseph, Erlanger, male, 1874-01-05, 247
+144, Joseph H., Taylor Jr., male, 1941-03-29, 35
+433, Joseph L., Goldstein, male, 1940-04-18, 467
+560, Joseph, Rotblat, male, 1908-11-04, 468
+366, Joshua, Lederberg, male, 1925-05-23, 0
+934, Juan Manuel, Santos, male, 1951-08-10, 469
+627, Juan Ramón, Jiménez, male, 1881-12-24, 470
+862, Jules A., Hoffmann, male, 1941-08-02, 471
+309, Jules, Bordet, male, 1870-06-13, 472
+85, Julian, Schwinger, male, 1918-02-12, 56
+396, Julius, Axelrod, male, 1912-05-30, 56
+317, Julius, Wagner-Jauregg, male, 1857-03-07, 473
+131, K. Alex, Müller, male, 1927-04-20, 323
+120, Kai M., Siegbahn, male, 1918-04-20, 474
+913, Kailash, Satyarthi, male, 1954-01-11, 475
+586, Karl, Gjellerup, male, 1857-06-02, 476
+321, Karl, Landsteiner, male, 1868-06-14, 477
+400, Karl, von Frisch, male, 1886-11-20, 60
+228, Karl, Ziegler, male, 1898-11-26, 478
+278, Kary B., Mullis, male, 1944-12-28, 480
+947, Kazuo, Ishiguro, male, 1954-11-08, 481
+386, Keffer, Hartline, male, 1903-12-22, 482
+257, Kenichi, Fukui, male, 1918-10-04, 483
+121, Kenneth G., Wilson, male, 1936-06-08, 484
+682, Kenneth J., Arrow, male, 1921-08-23, 56
+671, Kenzaburo, Oe, male, 1935-01-31, 485
+725, Kim, Dae-jung, male, 1925-12-03, 486
+943, Kip S., Thorne, male, 1940-06-01, 487
+473, Klas Pontus, Arnoldson, male, 1844-10-27, 100
+126, Klaus, von Klitzing, male, 1943-06-28, 488
+589, Knut, Hamsun, male, 1859-08-04, 489
+749, Kofi, Annan, male, 1938-04-08, 490
+757, Koichi, Tanaka, male, 1959-08-03, 491
+378, Konrad, Bloch, male, 1912-01-21, 492
+401, Konrad, Lorenz, male, 1903-11-07, 60
+850, Konstantin, Novoselov, male, 1974-08-23, 494
+211, Kurt, Alder, male, 1902-07-10, 495
+758, Kurt, Wüthrich, male, 1938-10-04, 496
+236, Lars, Onsager, male, 1903-11-27, 292
+895, Lars Peter, Hansen, male, 1952-10-26, 84
+21, Lawrence, Bragg, male, 1890-03-31, 403
+694, Lawrence R., Klein, male, 1920-09-14, 110
+531, Le Duc Tho, null, male, 1911-10-14, 497
+523, null, null, null, null, null
+545, Lech, Walesa, male, 1943-09-29, 498
+735, Leland, Hartwell, male, 1939-10-30, 77
+97, Leo, Esaki, male, 1925-03-12, 499
+484, Léon, Bourgeois, male, 1851-05-21, 64
+512, Léon, Jouhaux, male, 1879-07-01, 64
+132, Leon M., Lederman, male, 1922-07-15, 56
+95, Leon N., Cooper, male, 1930-02-28, 56
+820, Leonid, Hurwicz, male, 1917-08-21, 78
+686, Leonid Vitaliyevich, Kantorovich, male, 1912-01-19, 502
+200, Leopold, Ruzicka, male, 1887-09-13, 503
+516, Lester Bowles, Pearson, male, 1897-04-23, 287
+77, Lev, Landau, male, 1908-01-22, 504
+870, Leymah, Gbowee, female, 1972-02-01, 248
+775, Linda B., Buck, female, 1947-01-29, 199
+217, Linus, Pauling, male, 1901-02-28, 505
+855, Xiaobo, Liu, male, 1955-12-28, 237
+883, Lloyd S., Shapley, male, 1923-06-02, 11
+510, John, Boyd Orr, male, 1880-09-23, 506
+8, Lord, Rayleigh, male, 1842-11-12, 507
+221, Lord, Todd, male, 1907-10-02, 95
+36, Louis, de Broglie, male, 1892-08-15, 508
+459, Louis J., Ignarro, male, 1941-05-31, 96
+92, Louis, Néel, male, 1904-11-22, 509
+472, Louis, Renault, male, 1843-05-21, 511
+993, Louise, Glück, female, 1943-04-22, 56
+825, Luc, Montagnier, male, 1932-08-18, 512
+493, Ludwig, Quidde, male, 1858-03-23, 513
+607, Luigi, Pirandello, male, 1867-06-28, 514
+89, Luis, Alvarez, male, 1911-06-13, 247
+239, Luis, Leloir, male, 1906-09-06, 64
+977, M. Stanley, Whittingham, male, 1941-12-22, 111
+536, Mairead, Corrigan, female, 1944-01-27, 126
+827, Makoto, Kobayashi, male, 1944-04-07, 30
+914, Malala, Yousafzai, female, 1997-07-12, 516
+233, Manfred, Eigen, male, 1927-05-09, 517
+29, Manne, Siegbahn, male, 1886-12-03, 518
+79, Maria, Goeppert Mayer, female, 1906-06-28, 519
+6, Marie, Curie, female, 1867-11-07, 468
+282, Mario J., Molina, male, 1943-03-19, 520
+811, Mario R., Capecchi, male, 1937-10-06, 521
+854, Mario, Vargas Llosa, male, 1936-03-28, 523
+390, Marshall W., Nirenberg, male, 1927-04-10, 56
+830, Martin, Chalfie, male, 1947-01-15, 37
+889, Martin, Karplus, male, 1930-03-15, 60
+147, Martin L., Perl, male, 1927-06-24, 56
+524, Martin Luther, King Jr., male, 1929-01-15, 524
+451, Martin, Rodbell, male, 1925-12-01, 16
+100, Martin, Ryle, male, 1918-09-27, 447
+159, Martinus J.G., Veltman, male, 1931-06-27, 525
+833, Martti, Ahtisaari, male, 1937-06-23, 526
+754, Masatoshi, Koshiba, male, 1926-09-19, 527
+702, Maurice, Allais, male, 1911-05-31, 64
+581, Maurice, Maeterlinck, male, 1862-08-29, 182
+374, Maurice, Wilkins, male, 1916-12-15, 528
+61, Max, Born, male, 1882-12-11, 529
+391, Max, Delbrück, male, 1906-09-04, 19
+226, Max F., Perutz, male, 1914-05-19, 60
+23, Max, Planck, male, 1858-04-23, 530
+352, Max, Theiler, male, 1899-01-30, 531
+19, Max, von Laue, male, 1879-10-09, 532
+904, May-Britt, Moser, female, 1963-01-04, 533
+568, null, null, null, null, null
+225, Melvin, Calvin, male, 1911-04-08, 534
+133, Melvin, Schwartz, male, 1932-11-02, 56
+539, Menachem, Begin, male, 1913-08-16, 536
+705, Merton H., Miller, male, 1923-05-16, 72
+986, Michael, Houghton, male, null, null
+984, Michael, Kremer, male, 1964-11-12, 56
+890, Michael, Levitt, male, 1947-05-09, 531
+939, Michael, Rosbash, male, 1944-03-07, 538
+432, Michael S., Brown, male, 1941-04-13, 56
+279, Michael, Smith, male, 1932-04-26, 539
+940, Michael W., Young, male, 1949-03-28, 541
+974, Michel, Mayor, male, 1942-01-12, 410
+641, Miguel Angel, Asturias, male, 1899-10-19, 542
+552, Mikhail, Gorbachev, male, 1931-03-02, 543
+638, Mikhail, Sholokhov, male, 1905-05-24, 544
+688, Milton, Friedman, male, 1912-07-31, 96
+880, Mo, Yan, male, 1955-02-02, 545
+798, Mohamed, ElBaradei, male, 1942-06-17, 214
+540, Anjezë Gonxhe, Bojaxhiu, female, 1910-08-26, 546
+809, Muhammad, Yunus, male, 1940-06-28, 547
+90, Murray, Gell-Mann, male, 1929-09-15, 56
+718, Myron, Scholes, male, 1941-07-01, 548
+967, Nadia, Murad, female, 1993-00-00, 550
+668, Nadine, Gordimer, female, 1923-11-20, 551
+665, Naguib, Mahfouz, male, 1911-12-11, 214
+503, null, null, null, null, null
+495, Nathan, Söderblom, male, 1866-01-15, 552
+925, null, null, null, null, null
+640, Nelly, Sachs, female, 1891-12-10, 19
+555, Nelson, Mandela, male, 1918-07-18, 553
+497, Nicholas Murray, Butler, male, 1862-04-02, 554
+118, Nicolaas, Bloembergen, male, 1920-03-11, 555
+82, Nicolay G., Basov, male, 1922-12-14, 556
+27, Niels, Bohr, male, 1885-10-07, 2
+429, Niels K., Jerne, male, 1911-12-23, 9
+295, Niels Ryberg, Finsen, male, 1860-12-15, 557
+402, Nikolaas, Tinbergen, male, 1907-04-15, 422
+220, Nikolay, Semenov, male, 1896-04-03, 558
+528, Norman, Borlaug, male, 1914-03-25, 559
+135, Norman F., Ramsey, male, 1915-08-27, 15
+196, Norman, Haworth, male, 1883-03-19, 560
+667, Octavio, Paz, male, 1914-03-31, 520
+238, Odd, Hassel, male, 1897-05-17, 292
+655, Odysseus, Elytis, male, 1911-11-02, 563
+515, null, null, null, null, null
+979, Olga, Tokarczuk, female, 1962-01-29, 564
+847, Oliver E., Williamson, male, 1932-09-27, 565
+935, Oliver, Hart, male, 1948-10-09, 9
+813, Oliver, Smithies, male, 1925-06-23, 448
+893, null, null, null, null, null
+808, Orhan, Pamuk, male, 1952-06-07, 566
+829, Osamu, Shimomura, male, 1928-08-27, 382
+549, Oscar, Arias Sánchez, male, 1940-09-13, 569
+210, Otto, Diels, male, 1876-01-23, 142
+202, Otto, Hahn, male, 1879-03-08, 367
+331, Otto, Loewi, male, 1873-06-03, 367
+312, Otto, Meyerhof, male, 1884-04-12, 571
+48, Otto, Stern, male, 1888-02-17, 572
+169, Otto, Wallach, male, 1847-03-27, 297
+322, Otto, Warburg, male, 1883-10-08, 573
+73, Owen, Chamberlain, male, 1920-07-10, 247
+35, Owen Willans, Richardson, male, 1879-04-26, 574
+645, Pablo, Neruda, male, 1904-07-12, 575
+622, Pär, Lagerkvist, male, 1891-05-23, 576
+53, Patrick M.S., Blackett, male, 1897-11-18, 9
+912, Patrick, Modiano, male, 1945-07-30, 64
+648, Patrick, White, male, 1912-05-28, 9
+679, Paul A., Samuelson, male, 1915-05-15, 466
+40, Paul A.M., Dirac, male, 1902-08-08, 87
+254, Paul, Berg, male, 1926-06-30, 56
+764, Paul C., Lauterbur, male, 1929-05-06, 577
+287, Paul D., Boyer, male, 1918-07-31, 578
+302, Paul, Ehrlich, male, 1854-03-14, 579
+723, Paul, Greengard, male, 1925-12-11, 56
+476, Paul Henri, d'Estournelles de Constant, male, 1852-11-22, 580
+580, Paul, Heyse, male, 1830-03-15, 20
+281, Paul J., Crutzen, male, 1933-12-03, 295
+246, Paul J., Flory, male, 1910-06-19, 582
+197, Paul, Karrer, male, 1889-04-21, 78
+834, Paul, Krugman, male, 1953-02-28, 56
+969, Paul M., Romer, male, 1955-00-00, 454
+922, Paul, Modrich, male, 1946-06-13, 583
+346, Paul, Müller, male, 1899-01-12, 585
+995, Paul, Milgrom, male, 1948-04-20, 586
+173, Paul, Sabatier, male, 1854-11-05, 42
+70, Pavel A., Cherenkov, male, 1904-07-28, 587
+610, Pearl, Buck, female, 1892-06-26, 588
+51, Percy W., Bridgman, male, 1882-04-21, 11
+477, null, null, null, null, null
+856, Peter A., Diamond, male, 1940-04-29, 56
+769, Peter, Agre, male, 1949-01-30, 590
+455, Peter C., Doherty, male, 1940-10-15, 591
+195, Peter, Debye, male, 1884-03-24, 593
+815, Peter, Grünberg, male, 1939-05-18, 594
+980, Peter, Handke, male, 1942-12-06, 596
+888, Peter, Higgs, male, 1929-05-29, 597
+370, Peter, Medawar, male, 1915-02-28, 598
+251, Peter, Mitchell, male, 1920-09-29, 599
+383, Peyton, Rous, male, 1879-10-05, 16
+518, Philip, Noel-Baker, male, 1889-11-01, 9
+351, Philip S., Hench, male, 1896-02-28, 178
+107, Philip W., Anderson, male, 1923-12-13, 601
+9, Philipp, Lenard, male, 1862-06-07, 602
+449, Phillip A., Sharp, male, 1944-06-06, 603
+5, Pierre, Curie, male, 1859-05-15, 64
+141, Pierre-Gilles, de Gennes, male, 1932-10-24, 64
+3, Pieter, Zeeman, male, 1865-05-25, 604
+64, Polykarp, Kusch, male, 1911-01-26, 605
+561, null, null, null, null, null
+110, Pyotr, Kapitsa, male, 1894-07-09, 607
+583, Rabindranath, Tagore, male, 1861-05-07, 608
+677, Ragnar, Frisch, male, 1895-03-03, 562
+385, Ragnar, Granit, male, 1900-10-30, 98
+941, Rainer, Weiss, male, 1932-09-29, 19
+511, Ralph, Bunche, male, 1904-08-07, 586
+863, Ralph M., Steinman, male, 1943-01-14, 609
+466, Randal, Cremer, male, 1828-03-18, 610
+885, Randy W., Schekman, male, 1948-12-30, 534
+753, Raymond, Davis Jr., male, 1914-10-14, 15
+989, Reinhard, Genzel, male, 1952-03-24, 611
+713, Reinhard, Selten, male, 1930-10-05, 529
+407, Renato, Dulbecco, male, 1914-02-22, 614
+526, René, Cassin, male, 1887-10-05, 615
+755, Riccardo, Giacconi, male, 1931-10-06, 267
+774, Richard, Axel, male, 1946-07-02, 56
+286, Richard E., Smalley, male, 1943-06-06, 616
+140, Richard E., Taylor, male, 1929-11-02, 617
+851, Richard F., Heck, male, 1931-08-15, 618
+949, Richard H., Thaler, male, 1945-09-12, 619
+946, Richard, Henderson, male, 1945-07-19, 82
+448, Richard J., Roberts, male, 1943-09-06, 620
+198, Richard, Kuhn, male, 1900-12-03, 622
+215, Richard L.M., Synge, male, 1914-10-28, 413
+86, Richard P., Feynman, male, 1918-05-11, 56
+276, Richard R., Ernst, male, 1933-08-14, 624
+796, Richard R., Schrock, male, 1945-01-04, 625
+698, Richard, Stone, male, 1913-08-30, 9
+176, Richard, Willstätter, male, 1872-08-13, 626
+182, Richard, Zsigmondy, male, 1865-04-01, 477
+554, Rigoberta, Menchú Tum, female, 1959-01-09, 627
+435, Rita, Levi-Montalcini, female, 1909-04-22, 628
+258, Roald, Hoffmann, male, 1937-07-18, 629
+28, Robert A., Millikan, male, 1868-03-22, 630
+155, Robert B., Laughlin, male, 1950-11-01, 631
+996, Robert, Wilson, male, 1937-05-16, 632
+231, Robert B., Woodward, male, 1917-04-10, 72
+308, Robert, Bárány, male, 1876-04-22, 60
+717, Robert C., Merton, male, 1944-07-31, 56
+151, Robert C., Richardson, male, 1937-06-26, 15
+502, Robert, Cecil, male, 1864-09-14, 9
+714, Robert E., Lucas Jr., male, 1937-09-15, 633
+284, Robert F., Curl Jr., male, 1933-08-23, 418
+771, Robert F., Engle III, male, 1942-11-10, 634
+458, Robert F., Furchgott, male, 1916-06-04, 635
+848, Robert G., Edwards, male, 1925-09-27, 636
+795, Robert H., Grubbs, male, 1942-02-27, 637
+75, Robert, Hofstadter, male, 1915-02-05, 56
+271, Robert, Huber, male, 1937-02-20, 21
+799, Robert J., Aumann, male, 1930-06-08, 367
+878, Robert J., Lefkowitz, male, 1943-04-15, 56
+896, Robert J., Shiller, male, 1946-03-29, 586
+297, Robert, Koch, male, 1843-12-11, 640
+701, Robert M., Solow, male, 1924-08-23, 96
+720, Robert, Mundell, male, 1932-10-24, 641
+232, Robert S., Mulliken, male, 1896-06-07, 642
+96, Robert, Schrieffer, male, 1931-05-31, 260
+709, Robert W., Fogel, male, 1927-07-01, 56
+388, Robert W., Holley, male, 1922-01-28, 84
+112, Robert Woodrow, Wilson, male, 1936-01-10, 274
+770, Roderick, MacKinnon, male, 1956-02-19, 643
+399, Rodney R., Porter, male, 1917-10-08, 644
+822, Roger B., Myerson, male, 1951-03-29, 72
+806, Roger D., Kornberg, male, 1947-04-24, 140
+411, Roger, Guillemin, male, 1924-01-11, 645
+609, Roger, Martin du Gard, male, 1881-03-23, 646
+988, Roger, Penrose, male, 1931-08-08, 647
+422, Roger W., Sperry, male, 1913-08-20, 108
+831, Roger Y., Tsien, male, 1952-02-01, 56
+456, Rolf M., Zinkernagel, male, 1944-01-06, 323
+584, Romain, Rolland, male, 1866-01-29, 648
+234, Ronald G.W., Norrish, male, 1897-11-09, 6
+707, Ronald H., Coase, male, 1910-12-29, 649
+294, Ronald, Ross, male, 1857-05-13, 650
+413, Rosalyn, Yalow, female, 1921-07-19, 56
+791, Roy J., Glauber, male, 1925-09-01, 56
+578, Rudolf, Eucken, male, 1846-01-05, 652
+76, Rudolf, Mössbauer, male, 1929-01-31, 21
+277, Rudolph A., Marcus, male, 1923-07-21, 609
+577, Rudyard, Kipling, male, 1865-12-30, 653
+143, Russell A., Hulse, male, 1950-11-28, 56
+742, Ryoji, Noyori, male, 1938-09-03, 654
+631, Saint-John, Perse, male, 1887-05-31, 655
+393, Salvador E., Luria, male, 1912-08-13, 628
+630, Salvatore, Quasimodo, male, 1901-08-20, 656
+643, Samuel, Beckett, male, 1906-04-13, 264
+106, Samuel C.C., Ting, male, 1936-01-27, 255
+299, Santiago, Ramón y Cajal, male, 1852-05-01, 657
+917, Satoshi, &#332;mura, male, 1935-07-12, 658
+652, Saul, Bellow, male, 1915-06-10, 609
+864, Saul, Perlmutter, male, 1959-00-00, 659
+672, Seamus, Heaney, male, 1939-04-13, 660
+532, Seán, MacBride, male, 1904-01-26, 64
+579, Selma, Lagerlöf, female, 1858-11-20, 661
+353, Selman A., Waksman, male, 1888-07-22, 662
+876, Serge, Haroche, male, 1944-09-11, 664
+367, Severo, Ochoa, male, 1905-09-24, 665
+113, Sheldon, Glashow, male, 1932-12-05, 56
+558, Shimon, Peres, male, 1923-08-16, 666
+875, Shinya, Yamanaka, male, 1962-09-04, 499
+773, Shirin, Ebadi, female, 1947-06-21, 667
+639, Shmuel, Agnon, male, 1888-07-17, 668
+908, Shuji, Nakamura, male, 1954-05-22, 669
+273, Sidney, Altman, male, 1939-05-07, 609
+601, Sigrid, Undset, female, 1882-05-20, 670
+680, Simon, Kuznets, male, 1901-04-30, 671
+125, Simon, van der Meer, male, 1925-11-24, 422
+84, Sin-Itiro, Tomonaga, male, 1906-03-31, 382
+603, Sinclair, Lewis, male, 1885-02-07, 672
+339, Sir Alexander, Fleming, male, 1881-08-06, 673
+693, Sir Arthur, Lewis, male, 1915-01-23, 674
+488, Sir Austen, Chamberlain, male, 1863-10-16, 561
+394, Sir Bernard, Katz, male, 1911-03-26, 675
+37, Sir Chandrasekhara Venkata, Raman, male, 1888-11-07, 676
+323, Sir Charles, Sherrington, male, 1857-11-27, 9
+219, Sir Cyril, Hinshelwood, male, 1897-05-19, 9
+369, Sir Frank Macfarlane, Burnet, male, 1899-09-03, 677
+320, Sir Frederick, Hopkins, male, 1861-06-20, 290
+965, Sir Gregory P., Winter, male, 1951-04-14, 679
+285, Sir Harold, Kroto, male, 1939-10-07, 680
+330, Sir Henry, Dale, male, 1875-06-09, 9
+341, Sir Howard, Florey, male, 1898-09-24, 403
+932, Sir J. Fraser, Stoddart, male, 1942-05-24, 156
+437, Sir James W., Black, male, 1924-06-14, 681
+874, Sir John B., Gurdon, male, 1933-10-02, 682
+375, Sir John, Eccles, male, 1903-01-27, 678
+812, Sir Martin J., Evans, male, 1941-01-01, 684
+108, Sir Nevill F., Mott, male, 1905-09-30, 685
+498, Sir Norman, Angell, male, 1872-12-26, 686
+737, Sir Paul, Nurse, male, 1949-01-25, 687
+971, Peter, Ratcliffe, male, 1954-05-14, 688
+765, Sir Peter, Mansfield, male, 1933-10-09, 9
+207, Sir Robert, Robinson, male, 1886-09-13, 690
+163, Sir William, Ramsay, male, 1852-10-02, 95
+242, Stanford, Moore, male, 1913-09-04, 37
+457, Stanley B., Prusiner, male, 1942-05-28, 691
+434, Stanley, Cohen, male, 1922-11-17, 96
+910, Stefan W., Hell, male, 1962-12-23, 692
+152, Steven, Chu, male, 1948-02-28, 140
+115, Steven, Weinberg, male, 1933-05-03, 56
+122, Subramanyan, Chandrasekhar, male, 1910-10-19, 693
+569, Sully, Prudhomme, male, 1839-03-16, 64
+425, Sune K., Bergström, male, 1916-01-10, 90
+436, Susumu, Tonegawa, male, 1939-09-05, 30
+162, Svante, Arrhenius, male, 1859-02-19, 694
+924, Svetlana, Alexievich, female, 1948-05-31, 695
+750, Sydney, Brenner, male, 1927-01-13, 696
+619, T.S., Eliot, male, 1888-09-26, 140
+350, Tadeus, Reichstein, male, 1897-07-20, 697
+919, Takaaki, Kajita, male, 1959-03-09, 698
+959, Tasuku, Honjo, male, 1942-01-27, 382
+871, Tawakkol, Karman, female, 1979-02-07, 700
+551, Lhamo, Thondup, male, 1935-07-06, 701
+183, The, Svedberg, male, 1884-08-30, 702
+303, Theodor, Kocher, male, 1841-08-25, 589
+571, Theodor, Mommsen, male, 1817-11-30, 703
+793, Theodor W., Hänsch, male, 1941-10-30, 50
+470, Theodore, Roosevelt, male, 1858-10-27, 56
+175, Theodore W., Richards, male, 1868-01-31, 704
+692, Theodore W., Schultz, male, 1902-04-30, 705
+842, Thomas A., Steitz, male, 1940-08-23, 200
+800, Thomas C., Schelling, male, 1921-04-14, 706
+886, Thomas C., Südhof, male, 1955-12-22, 22
+325, Thomas H., Morgan, male, 1866-09-25, 708
+357, Thomas H., Weller, male, 1915-06-15, 255
+872, Thomas J., Sargent, male, 1943-07-19, 25
+602, Thomas, Mann, male, 1875-06-06, 709
+274, Thomas R., Cech, male, 1947-12-08, 37
+736, Tim, Hunt, male, 1943-02-19, 710
+687, Tjalling C., Koopmans, male, 1910-08-28, 711
+478, Tobias, Asser, male, 1838-04-28, 295
+921, Tomas, Lindahl, male, 1938-01-28, 90
+868, Tomas, Tranströmer, male, 1931-04-15, 90
+670, Toni, Morrison, female, 1931-02-18, 713
+424, Torsten N., Wiesel, male, 1924-06-03, 71
+828, Toshihide, Maskawa, male, 1940-02-07, 30
+703, Trygve, Haavelmo, male, 1911-12-13, 714
+69, Tsung-Dao, Lee, male, 1926-11-24, 160
+918, Youyou, Tu, female, 1930-12-30, 715
+395, Ulf, von Euler, male, 1905-02-07, 90
+748, null, null, null, null, null
+525, null, null, null, null, null
+550, null, null, null, null, null
+747, V. S., Naipaul, male, 1932-08-17, 717
+117, Val, Fitch, male, 1923-03-10, 718
+841, Venkatraman, Ramakrishnan, male, 1952-00-00, 719
+585, Verner, von Heidenstam, male, 1859-07-06, 720
+760, Vernon L., Smith, male, 1927-01-01, 721
+653, Vicente, Aleixandre, male, 1898-04-26, 722
+42, Victor F., Hess, male, 1883-06-24, 723
+172, Victor, Grignard, male, 1871-05-06, 725
+218, Vincent, du Vigneaud, male, 1901-05-18, 37
+767, Vitaly L., Ginzburg, male, 1916-10-04, 78
+248, Vladimir, Prelog, male, 1906-07-23, 726
+255, Walter, Gilbert, male, 1932-03-21, 72
+67, Walter H., Brattain, male, 1902-02-10, 727
+347, Walter, Hess, male, 1881-03-17, 728
+290, Walter, Kohn, male, 1923-03-09, 60
+62, Walther, Bothe, male, 1891-01-08, 729
+178, Walther, Nernst, male, 1864-06-25, 730
+783, Wangari, Maathai, female, 1940-04-01, 731
+683, Wassily, Leontief, male, 1906-08-05, 395
+206, Wendell M., Stanley, male, 1904-08-16, 732
+414, Werner, Arber, male, 1929-06-03, 733
+361, Werner, Forssmann, male, 1904-08-29, 19
+38, Werner, Heisenberg, male, 1901-12-05, 734
+1, Wilhelm Conrad, Röntgen, male, 1845-03-27, 735
+168, Wilhelm, Ostwald, male, 1853-09-02, 736
+16, Wilhelm, Wien, male, 1864-01-13, 737
+224, Willard F., Libby, male, 1908-12-17, 738
+839, Willard S., Boyle, male, 1924-08-19, 739
+315, Willem, Einthoven, male, 1860-05-21, 740
+123, William A., Fowler, male, 1911-08-09, 178
+65, William B., Shockley, male, 1910-02-13, 9
+20, William, Bragg, male, 1862-07-02, 741
+593, William Butler, Yeats, male, 1865-06-13, 264
+916, William C., Campbell, male, 1930-06-28, 742
+968, William D., Nordhaus, male, 1941-05-31, 744
+154, William D., Phillips, male, 1948-11-05, 226
+911, William E., Moerner, male, 1953-06-24, 746
+209, William F., Giauque, male, 1895-05-12, 747
+706, William F., Sharpe, male, 1934-06-16, 72
+620, William, Faulkner, male, 1897-09-25, 748
+970, William, Kaelin, male, 1957-11-23, 56
+660, William, Golding, male, 1911-09-19, 750
+243, William H., Stein, male, 1911-06-25, 56
+741, William, Knowles, male, 1917-06-01, 751
+249, William, Lipscomb, male, 1919-12-09, 209
+328, William P., Murphy, male, 1892-02-06, 752
+716, William, Vickrey, male, 1914-06-21, 753
+63, Willis E., Lamb, male, 1913-07-12, 77
+529, Willy, Brandt, male, 1913-12-18, 709
+624, Winston, Churchill, male, 1874-11-30, 754
+673, Wislawa, Szymborska, female, 1923-07-02, 755
+594, Wladyslaw, Reymont, male, 1867-05-07, 756
+663, Wole, Soyinka, male, 1934-07-13, 757
+739, Wolfgang, Ketterle, male, 1957-10-21, 758
+137, Wolfgang, Paul, male, 1913-08-10, 759
+50, Wolfgang, Pauli, male, 1900-04-25, 60
+483, Woodrow, Wilson, male, 1856-12-28, 760
+994, null, null, null, null, null
+557, Yasser, Arafat, male, 1929-08-24, 214
+642, Yasunari, Kawabata, male, 1899-06-11, 499
+559, Yitzhak, Rabin, male, 1922-03-01, 13
+826, Yoichiro, Nambu, male, 1921-01-18, 29
+927, Yoshinori, Ohsumi, male, 1945-02-09, 761
+265, Yuan T., Lee, male, 1936-11-19, 762
+794, Yves, Chauvin, male, 1930-10-10, 763
+726, Zhores, Alferov, male, 1930-03-15, 765

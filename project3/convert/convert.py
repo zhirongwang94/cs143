@@ -5,18 +5,17 @@ import sys
 reload(sys)  # Reload does the trick!
 sys.setdefaultencoding('UTF8')
 
+# for reading data
 nobel_json_file = open('nobel-laureates.json')
 
+# for writing data
 city_table = open("city.del", "w") 
 person_table = open("person.del", "w") 
 organization_table = open("organization.del", "w") 
 nobel_prize_table = open("nobel_prize.del", "w") 
 
-# person_table.write("id, givenName, familyName, gender birth_date, birth_city_id\n")
-
 # array of dictinary {u'city': ".. ", u'country': ".. "}
 Cities = []  
-
 
 def get_city_id(place):
 	city_dict = {u'city': ".", u'country': "."}
@@ -25,9 +24,11 @@ def get_city_id(place):
 		city_dict[u'city'] = place[u'city'][u'en']
 		if place.has_key(u'country'):
 			city_dict[u'country'] = place[u'country'][u'en']
+	
 	# print ("city dictL: ", city_dict)
 	if city_dict not in Cities:
 		Cities.append(city_dict)
+
 
 	return str(Cities.index(city_dict))
 
@@ -43,14 +44,18 @@ def format_person_tuple(laureate):
 
 	person_tuple = ""
 
+	# u', '  ====== ", "
 	if laureate.has_key(u'id'):
 		person_tuple = person_tuple + laureate[u'id'] + u', '
 	else:
 		return
+	# no need to discuss, keep line 47 only
 
 	if laureate.has_key(u'givenName'):
 		name_dict = laureate[u'givenName']
 		person_tuple = person_tuple + get_english_name(name_dict) + u', '
+		# person_tuple = person_tuple + laureate[u'givenName'][u'en'] + u', '
+		# can use this
 	else:
 		person_tuple = person_tuple + "null" + u', '
 
@@ -82,6 +87,10 @@ def format_person_tuple(laureate):
 
 	else:
 		person_tuple = person_tuple + "null, null\n"  
+
+	# person_tuple = "745, A. Michael, Spence, male, 1943-00-00, 0"	
+	# all code above is to format this string
+
 	# print(person_tuple)
 	person_table.write(str(person_tuple))
 
@@ -117,27 +126,31 @@ def formate_org_tuple(laureate):
 		return; 
 	else:
 		organization_table.write(str(org_tuple))
+
 	# print(org_tuple)
 # ===============
 
 #  scheme NobelPrizes(Id, number, awardYear, category, sortOrder, 
 # portion, dataAwarded, prizeStatus, PrizeAmount, affiliations_name, 
 # affiliation_city_id)
+
+# 745, 1, 2001, Economic Sciences, 2, 1/3, 2001-10-10, received, 10000000, Stanford University, 1
 def format_prize_tuple(laureate):
 	prizes = laureate[u'nobelPrizes']
 	prize_tuple = ""
 
 	# curr_prize = prizes[1]
 
-	j = 0 
+	# number dijici huojiang
+	number = 0 
 	for curr_prize in prizes: 
-		j += 1
+		number += 1
 		if laureate.has_key(u'id'):
 			prize_tuple += laureate[u'id'] + u', '
 		else:
 			return ""
 
-		prize_tuple += str(j) + u', '
+		prize_tuple += str(number) + u', '
 		if curr_prize.has_key(u'awardYear'):
 			prize_tuple += curr_prize[u'awardYear'] + u', '
 		else:
@@ -189,40 +202,36 @@ def format_prize_tuple(laureate):
 #schema City(City_id, name, country)
 def format_city_tuple(city_array):
 	for i in city_array:
-		string_to_write = str(city_array.index(i)) + u', ' + i[u'city'] + u', '
-		string_to_write += i[u'country'] + u'\n'
+		string_to_write = str(city_array.index(i)) + u'| ' +i[u'city'] + u'| '
+		string_to_write +=  i[u'country'] + u'\n'
 		# print(string_to_write) 
 		city_table.write(string_to_write)
 
-
-
-
-
-
-
-
-# #  Cities is a list of {city:  country:}, the index is its id
 
 # Opening JSON file 
 # returns JSON object as a dictionary 
 nobel_json_data = json.load(nobel_json_file)
 
-print ("first level key is: ", nobel_json_data.keys())
-name = nobel_json_data.keys()[0]
-all_data = nobel_json_data[name]
+# print ("first level key is: ", nobel_json_data.keys())
+# name = nobel_json_data.keys()[0]
+# all_laureates = nobel_json_data[name]
+
+all_laureates = nobel_json_data[u'laureates']
 
 
 
-# first_person = all_data[0]
+# format_person_tuple(all_laureates[0])
+# format_prize_tuple(all_laureates[395])
+# format_prize_tuple(all_laureates[462])
+# format_prize_tuple(all_laureates[549])
+# format_prize_tuple(all_laureates[572])
+# format_prize_tuple(all_laureates[641])
+#  482, 66, 217, 6, 515
 
-# format_prize_tuple(all_data[572])
-
-
-
-for i in all_data:
-	format_person_tuple(i)
-	formate_org_tuple(i)
-	format_prize_tuple(i)
+for laureate in all_laureates:
+	format_person_tuple(laureate)
+	formate_org_tuple(laureate)
+	format_prize_tuple(laureate)
 
 
 format_city_tuple(Cities)
@@ -232,13 +241,6 @@ format_city_tuple(Cities)
 # ('tuple whose laureate got more than one prize: ', 549)
 # ('tuple whose laureate got more than one prize: ', 572)
 # ('tuple whose laureate got more than one prize: ', 641)
-
-# j = 0
-# for i in all_data:
-# 	if format_prize_tuple(i) > 1:
-# 		print("tuple whose laureate got more than one prize: ", j)
-# 	j += 1
-
 
 
 

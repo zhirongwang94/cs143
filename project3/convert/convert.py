@@ -1,9 +1,10 @@
 
 import json 
 import sys
+from importlib import reload
 # sys.setdefaultencoding() does not exist, here!
 reload(sys)  # Reload does the trick!
-sys.setdefaultencoding('UTF8')
+# sys.setdefaultencoding('UTF8')
 
 # for reading data
 nobel_json_file = open('nobel-laureates.json')
@@ -42,43 +43,47 @@ def get_english_name(name_dict):
 def format_person_tuple(laureate):
 	# keys_to_lookup = [u'id', u'givenName', u'familyName', u'gender', u'birth']
 
+	num_null = 0;
 	person_tuple = ""
 
-	# u', '  ====== ", "
+	# u'|'  ====== ", "
 	if laureate.has_key(u'id'):
-		person_tuple = person_tuple + laureate[u'id'] + u', '
+		person_tuple = person_tuple + laureate[u'id'] + u'|'
 	else:
 		return
 	# no need to discuss, keep line 47 only
 
 	if laureate.has_key(u'givenName'):
 		name_dict = laureate[u'givenName']
-		person_tuple = person_tuple + get_english_name(name_dict) + u', '
-		# person_tuple = person_tuple + laureate[u'givenName'][u'en'] + u', '
+		person_tuple = person_tuple + get_english_name(name_dict) + u'|'
+		# person_tuple = person_tuple + laureate[u'givenName'][u'en'] + u'|'
 		# can use this
 	else:
-		person_tuple = person_tuple + "null" + u', '
+		person_tuple = person_tuple + "null" + u'|'
+		num_null += 1
 
 
 	if laureate.has_key(u'familyName'):
 		name_dict = laureate[u'familyName']
-		person_tuple = person_tuple + get_english_name(name_dict) + u', '
+		person_tuple = person_tuple + get_english_name(name_dict) + u'|'
 	else:
-		person_tuple = person_tuple + "null" + u', '
+		person_tuple = person_tuple + "null" + u'|'
+		num_null += 1
 
 
 	if laureate.has_key(u'gender'):
-		person_tuple = person_tuple + laureate[u'gender'] + u', '
+		person_tuple = person_tuple + laureate[u'gender'] + u'|'
 	else:
-		person_tuple = person_tuple + "null" + u', '
+		person_tuple = person_tuple + "null" + u'|'
+		num_null += 1
 
 
 	if laureate.has_key(u'birth'):
 		birth = laureate[u'birth']
 		if birth.has_key(u'date'):
-			person_tuple = person_tuple + birth[u'date']  + u', '
+			person_tuple = person_tuple + birth[u'date']  + u'|'
 		else:
-			person_tuple = person_tuple + "null" + u', '
+			person_tuple = person_tuple + "null" + u'|'
 
 		if birth.has_key(u'place'):
 			person_tuple = person_tuple + get_city_id(birth[u'place']) + u'\n'
@@ -86,13 +91,17 @@ def format_person_tuple(laureate):
 			person_tuple = person_tuple + "null\n" 
 
 	else:
-		person_tuple = person_tuple + "null, null\n"  
+		person_tuple = person_tuple + "null|null\n"  
+		num_null += 2
 
 	# person_tuple = "745, A. Michael, Spence, male, 1943-00-00, 0"	
 	# all code above is to format this string
 
 	# print(person_tuple)
-	person_table.write(str(person_tuple))
+	if num_null > 4:
+		return
+	else:
+		person_table.write(str(person_tuple))
 
 # ===============
 
@@ -102,24 +111,24 @@ def formate_org_tuple(laureate):
 	org_tuple = ""
 
 	if laureate.has_key(u'id'):
-		org_tuple += laureate[u'id'] + u', '
+		org_tuple += laureate[u'id'] + u'|'
 	else:
 		return ""
 
 	if laureate.has_key(u'orgName'):
-		org_tuple += get_english_name(laureate[u'orgName']) + u', '
+		org_tuple += get_english_name(laureate[u'orgName']) + u'|'
 	else:
-		org_tuple +=  u'null, '
+		org_tuple +=  u'null|'
 		num_null += 1
 
 
 	if laureate.has_key(u'founded'):
 		# if laureate[u'founded'].has_key[u'date']:
-		org_tuple +=  laureate[u'founded'][u'date'] + u', '
+		org_tuple +=  laureate[u'founded'][u'date'] + u'|'
 		org_tuple +=  get_city_id(laureate[u'founded'][u'place'])
 		org_tuple +=  u'\n'
 	else:
-		org_tuple +=  u'null, null\n'
+		org_tuple +=  u'null|null\n'
 		num_null += 2
 
 	if num_null == 3:
@@ -146,54 +155,54 @@ def format_prize_tuple(laureate):
 	for curr_prize in prizes: 
 		number += 1
 		if laureate.has_key(u'id'):
-			prize_tuple += laureate[u'id'] + u', '
+			prize_tuple += laureate[u'id'] + u'|'
 		else:
 			return ""
 
-		prize_tuple += str(number) + u', '
+		prize_tuple += str(number) + u'|'
 		if curr_prize.has_key(u'awardYear'):
-			prize_tuple += curr_prize[u'awardYear'] + u', '
+			prize_tuple += curr_prize[u'awardYear'] + u'|'
 		else:
-			prize_tuple += u'null, '
+			prize_tuple += u'null|'
 
 		if curr_prize.has_key(u'category'):
-			prize_tuple += get_english_name(curr_prize[u'category']) + u', '
+			prize_tuple += get_english_name(curr_prize[u'category']) + u'|'
 		else:
-			prize_tuple += u'null, '
+			prize_tuple += u'null|'
 
 		if curr_prize.has_key(u'sortOrder'):
-			prize_tuple += curr_prize[u'sortOrder'] + u', '
+			prize_tuple += curr_prize[u'sortOrder'] + u'|'
 		else:
-			prize_tuple += u'null, '
+			prize_tuple += u'null|'
 
 		if curr_prize.has_key(u'portion'):
-			prize_tuple += curr_prize[u'portion'] + u', '
+			prize_tuple += curr_prize[u'portion'] + u'|'
 		else:
-			prize_tuple += u'null, '
+			prize_tuple += u'null|'
 
 		if curr_prize.has_key(u'dateAwarded'):
-			prize_tuple += curr_prize[u'dateAwarded'] + u', '
+			prize_tuple += curr_prize[u'dateAwarded'] + u'|'
 		else:
-			prize_tuple += u'null, '
+			prize_tuple += u'null|'
 
 		if curr_prize.has_key(u'prizeStatus'):
-			prize_tuple += curr_prize[u'prizeStatus'] + u', '
+			prize_tuple += curr_prize[u'prizeStatus'] + u'|'
 		else:
-			prize_tuple += u'null, '
+			prize_tuple += u'null|'
 
 		if curr_prize.has_key(u'prizeAmount'):
-			prize_tuple += str(curr_prize[u'prizeAmount']) + u', '
+			prize_tuple += str(curr_prize[u'prizeAmount']) + u'|'
 		else:
-			prize_tuple += u'null, '
+			prize_tuple += u'null|'
 
 
 		cur_tuple = prize_tuple 
 		if curr_prize.has_key(u'affiliations'):
 			for k in curr_prize[u'affiliations']:
-				prize_tuple = cur_tuple + get_english_name(k[u'name']) + u', '
+				prize_tuple = cur_tuple + get_english_name(k[u'name']) + u'|'
 				prize_tuple += get_city_id(k) + u'\n'
 		else:
-			prize_tuple += u'null, null \n'
+			prize_tuple += u'null|null \n'
 	# print (prize_tuple)
 	nobel_prize_table.write(str(prize_tuple))
 

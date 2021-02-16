@@ -38,6 +38,21 @@ CREATE TABLE Person (
 );
 
 
+-- Ogranization(id, orgName, founded_date, city_id)
+CREATE TABLE Organization(
+	-- Organization ID
+	id INT NOT NULL,
+	-- The organization name
+	orgName VARCHAR(100),
+	-- The date when the organization was founded
+	founded_date DATE,
+	-- The city ID where the location locate at
+	city_id INT, 
+
+	PRIMARY KEY (id)
+);
+
+
 -- NobelPrizes(Id, num, awardYear, category, sortOrder, portion, dataAwarded, prizeStatus, PrizeAmount, affiliations_name, affiliation_city_id)
 CREATE TABLE NobelPrize(
 	-- Person ID
@@ -68,7 +83,7 @@ CREATE TABLE NobelPrize(
 
 
 
--- load Movie data
+-- load City Data
 LOAD DATA LOCAL INFILE '/home/cs143/project3/convert/city.del' 
 INTO TABLE City
 FIELDS TERMINATED BY '|'
@@ -77,22 +92,30 @@ LINES TERMINATED BY '\n';
 
 
 
--- load Movie data
+-- load Person data
 LOAD DATA LOCAL INFILE '/home/cs143/project3/convert/person.del' 
 INTO TABLE Person
 FIELDS TERMINATED BY ','
 -- expect fields to be enclosed within " quoting characters
-OPTIONALLY ENCLOSED BY '\"'
-LINES TERMINATED BY '\r\n';
+OPTIONALLY ENCLOSED BY '"'
+LINES TERMINATED BY '\n';
 
 
 
 
--- load Movie data
+-- load NobelPrize data
 LOAD DATA LOCAL INFILE '/home/cs143/project3/convert/nobel_prize.del' 
 INTO TABLE NobelPrize
 FIELDS TERMINATED BY ","
 -- expect fields to be enclosed within " quoting characters
+OPTIONALLY ENCLOSED BY '"'
+LINES TERMINATED BY '\n';
+
+
+-- load Organization data
+LOAD DATA LOCAL INFILE '/home/cs143/project3/convert/organization.del' 
+INTO TABLE Organization 
+FIELDS TERMINATED BY ","
 OPTIONALLY ENCLOSED BY '"'
 LINES TERMINATED BY '\n';
 

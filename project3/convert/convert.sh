@@ -1,5 +1,5 @@
 #!/bin/bash
-
+python3 convert.py
 #
 # Please uncomment one of the following three lines depending on the language of your choice
 #

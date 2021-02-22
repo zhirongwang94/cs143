@@ -1,7 +1,7 @@
 
 DROP TABLE IF EXISTS City;
 DROP TABLE IF EXISTS Person;
-DROP TABLE IF EXISTS Ogranization;
+DROP TABLE IF EXISTS Organization;
 DROP TABLE IF EXISTS NobelPrize;
 
 
@@ -82,9 +82,8 @@ CREATE TABLE NobelPrize(
 );
 
 
-
 -- load City Data
-LOAD DATA LOCAL INFILE '/home/cs143/project3/convert/city.del' 
+LOAD DATA LOCAL INFILE '/home/cs143/city.del' 
 INTO TABLE City
 FIELDS TERMINATED BY '|'
 -- expect fields to be enclosed within " quoting characters
@@ -93,9 +92,9 @@ LINES TERMINATED BY '\n';
 
 
 -- load Person data
-LOAD DATA LOCAL INFILE '/home/cs143/project3/convert/person.del' 
+LOAD DATA LOCAL INFILE '/home/cs143/person.del' 
 INTO TABLE Person
-FIELDS TERMINATED BY ','
+FIELDS TERMINATED BY '|'
 -- expect fields to be enclosed within " quoting characters
 OPTIONALLY ENCLOSED BY '"'
 LINES TERMINATED BY '\n';
@@ -104,18 +103,18 @@ LINES TERMINATED BY '\n';
 
 
 -- load NobelPrize data
-LOAD DATA LOCAL INFILE '/home/cs143/project3/convert/nobel_prize.del' 
+LOAD DATA LOCAL INFILE '/home/cs143/nobel_prize.del' 
 INTO TABLE NobelPrize
-FIELDS TERMINATED BY ","
+FIELDS TERMINATED BY '|'
 -- expect fields to be enclosed within " quoting characters
 OPTIONALLY ENCLOSED BY '"'
 LINES TERMINATED BY '\n';
 
 
 -- load Organization data
-LOAD DATA LOCAL INFILE '/home/cs143/project3/convert/organization.del' 
+LOAD DATA LOCAL INFILE '/home/cs143/organization.del' 
 INTO TABLE Organization 
-FIELDS TERMINATED BY ","
+FIELDS TERMINATED BY '|'
 OPTIONALLY ENCLOSED BY '"'
 LINES TERMINATED BY '\n';
 

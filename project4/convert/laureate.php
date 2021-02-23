@@ -1,45 +1,21 @@
+<!DOCTYPE HTML>
+<html>  
+<body>
 
-<?php
-// get the id parameter from the request
-$id = intval($_GET['id']);
+<form action="laureate.php" method="get">
+Name: <input type="text" name="id"><br>
+<input type="submit">
+</form>
 
-// set the Content-Type header to JSON, so that the client knows that we are returning a JSON data
-header('Content-Type: application/json');
-
-/*
-   Send the following fake JSON as the result
-   {  "id": $id,
-      "givenName": { "en": "A. Michael" },
-      "familyName": { "en": "Spencer" },
-      "affiliations": [ "UCLA", "White House" ]
-   }
-*/
-$output = (object) [
-    "id" => strval($id),
-    "givenName" => (object) [
-        "en" => "A. Michael"
-    ],
-    "familyName" => (object) [
-        "en" => "Spencer"
-    ],
-    "affliations" => array(
-        "UCLA",
-        "White House"
-    )
-];
-echo json_encode($output);
-
-?>
-
-<!---------------------------- Developing  ---------------------->
 
 
 <?php
-
+	$id = $_GET['id'];
+	print("id is $id <br><br><br>");
     $mng = new MongoDB\Driver\Manager("mongodb://localhost:27017");
 
 	$options = ["projection" => ['_id' => 0]];
-    $filter = [ 'gender' => 'female' ]; 
+    $filter = [ 'gender' => 'female', 'id' => $id ]; 
     $query = new MongoDB\Driver\Query($filter, $options);  
 
     // $query = new MongoDB\Driver\Query([]); 
@@ -47,20 +23,17 @@ echo json_encode($output);
 
     $rows = $mng->executeQuery("nobel.laureates", $query);
     foreach ($rows as $row) {
-        echo "id: $row->id  gender: $row->gender \n";
-        print_r($row);
+    	// $knownName = json_encode($row->gender);
+        // echo "id: $row->id  : knownName $knownName \n";
+        $to_print = json_encode($row);
+        print_r($to_print);
+        print "<br><br>";
     }
 
-    print "hello world from laureate.phpp";
+    print "hello world from laureate.php <br>";
+    print "Bye";
     
 ?>
 
-
-
-
-
-
-
-
-
-
+</body>
+</html>

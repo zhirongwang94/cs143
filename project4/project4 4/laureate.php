@@ -1,6 +1,6 @@
 
 <!DOCTYPE HTML>
-<html>
+<html>  
 <body>
 
 
@@ -21,8 +21,8 @@ Name: <input type="text" name="id"><br>
      $mng = new MongoDB\Driver\Manager("mongodb://localhost:27017");
     $options = ["projection" => ['_id' => 0]];
 
-    $filter = ['id' => $id ];
-    $query = new MongoDB\Driver\Query($filter, $options);
+    $filter = ['id' => $id ]; 
+    $query = new MongoDB\Driver\Query($filter, $options);  
 
    $rows = $mng->executeQuery("nobel.laureates", $query);
    foreach ($rows as $row) {
@@ -34,8 +34,11 @@ Name: <input type="text" name="id"><br>
 
     print "<br><br>";
     print "hello world from laureate.php";
-
+    
 ?>
+
+
+
 
 
 </body>

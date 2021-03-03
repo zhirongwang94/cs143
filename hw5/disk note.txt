@@ -1,0 +1,84 @@
+File && Disk && File Structure
+
+KEY WORDS:
+	Platter, cylinder, track, sector, 
+	speed, avg seek time 
+
+
+
+Assume the system is working. 
+Now, open the system, see how things is run. 
+
+Data structures, algorithm.  
+
+Build a higher data system. 
+
+Thing does not perform as expected, fix it. 
+
+Better idea about how thing work and how to make it better. 
+
+
+Physical Characteristic of the Disk.  
+ =======
+ ||cpu||
+ =======
+    |
+    |		system bus
+ ---------------------------------------
+         |			|
+	 |		===================
+	 |		|| disk controller||
+      ==============	====================
+      ||   Main   ||		|   ___
+      ||  Memory  ||		|--(d1 )
+      ==============		|   ---
+Speed cpu to main	        |
+Speed main to disk      	|   ___
+10:1				|--(d2 )
+				|   --- 
+				| 
+				|   ___
+				|--( d3)
+				    ---
+
+
+
+
+Magnetic disk VS. SSD
+	Magnetic Disk, 1-20 TB
+	Large
+	
+
+Solid State Drive(SSD)
+	stored data in and flash memory 
+	100GB - 10 TB
+	Fast
+
+
+
+Disk:
+		
+|Arm  Head  ----------------	
+|----------(  platter       ) 
+|	   (		    )
+|	    ----------------	 	
+|
+|
+|Arm  Head  ----------------	
+|----------(                ) 
+|	   (		    )
+|	    ----------------	 	
+|
+|
+|Arm  Head  ----------------	
+|----------(                ) 
+|	   (		    )
+|	    ----------------	 	
+|
+|
+
+
+
+
+
+

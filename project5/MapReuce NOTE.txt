@@ -1,0 +1,382 @@
+1:38 pm -- 2:30 pm
+Distributed analytics using cluster:
+
+Query logs:  query logs to 百度's database 
+
+Web pages: Google 上有无限 webpage
+
+
+Google want to find the most popular query to do the search inference. 
+
+
+Question: 
+	can we perform analytics on large data quickly using 
+	thousands of machines?
+
+
+Question:
+	can we transform and load data into RDBMS?
+	
+
+Challenges:
+	data transformation is data specific and labor-intensive 
+	parallel and distributed RDBMS is cost-prohibitive 
+
+
+======================================================================
+Search Log Analysis:
+
+INPUT:	Log file is spread over many machines 
+ -----------------------
+|cat, time, userid1, ip1|
+|-----------------------|
+|dog, time, userid1, ip1|
+|-----------------------|
+|cat, time, userid2, ip1|
+|-----------------------|
+|rat, time, userid3, ip1|
+|-----------------------|
+|rat, time, userid1, ip1|
+|-----------------------|
+	
+	| |
+	| |
+	VVV
+	 V
+
+OUTPUT:
+ -----------------------
+|cat, 10000.            |
+|-----------------------|
+|dog, 20000.            |
+|-----------------------|
+|rat, 12000.            |
+|-----------------------|
+
+======================================================================
+Example 1: Search Log Analysis:   Google suggests:
+
+Type: 		UCLA 
+Suggest:	ucla football
+		ucla clubs 
+
+Suggest:	ucla registra 
+		ucla girls 
+-----------
+Q: How can we do this?
+   How can we run it on thousands of machines in parallel?
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Machine 1:
+ -----------------------
+|cat, time, userid1, ip1|
+|-----------------------|
+|dog, time, userid1, ip1|
+|-----------------------|
+|.....			|
+
+	| |
+	| |
+	VVV
+	 V
+Output 
+ -----------------------
+|cat, 1.                |
+|-----------------------|
+|dog, 1.                |
+|-----------------------|
+|.....			|
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Machine 2:
+ ----------------------- 
+|cat, time, userid2, ip1|
+|-----------------------|
+|rat, time, userid3, ip1|
+|-----------------------|
+|.....			|
+	| |
+	| |
+	VVV
+	 V
+Output 
+ -----------------------
+|cat, 1.                |
+|-----------------------|
+|rat, 1.                |
+|-----------------------|
+|.....			|
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Machine 3:
+ -----------------------
+|rat, time, userid1, ip1|
+|-----------------------|
+|.....			|
+
+
+	| |
+	| |
+	VVV
+	 V
+Output 
+ -----------------------
+|rat, 1.                |
+|-----------------------|
+|.....	
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+Reduce/aggregate step: 
+	all the entry with the same query go to the same machine
+Sum them up. 
+Done. 
+
+Summary: Search log Analysis.: Generalization 
+	map/transform step: (input) -> (output)
+		one query have one corresponding line in the output 
+		input: rat, time, userid1, ip1  -> output: rat, 1
+
+	reduce/aggregate step:
+		all the entry with the same query go to the same machine
+		then we sum up all 1's. 	
+
+======================================================================
+
+
+
+
+
+
+
+======================================================================
+Example 2: Web Indexing 
+1 billion pages. Build "inverted index"
+
+INPUT DOCUMENTS: webpage context
+ -----------------------
+|1, cat, chase, dog 	|
+|-----------------------|
+|2, dog, hates, rat 	|
+|-----------------------|
+|3, cat, chase, cat 	|
+|-----------------------|
+|4, cat, hates, cat 	|
+|-----------------------|
+|5, cat, chase, zebra	|
+|-----------------------|
+|6, dog, hates, dog 	|
+|-----------------------|
+|7, cat, chase, dog 	|
+|-----------------------|
+|8, dog, hates, cat 	|
+|-----------------------|
+|.....			|
+
+	| |
+	| |
+	VVV
+	 V
+OUTPUT INDEX:
+ -----------------------
+|cat, 1, 3, 4, 5, 7, 8	|  documents that contain cat
+|-----------------------|
+|dog, 2, 6, 8           |
+|-----------------------|
+|rat, 2	                |
+|-----------------------|
+|zebra, 5	        |
+|-----------------------|
+|chase, 1,3,5,7	        |
+|-----------------------|
+|hate, 2,4,6,8	        |
+|-----------------------|
+|.....	
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Q: How can we run it on thousands of machines ?
+Q: Can we process each page independently?
+-----------------------------------------------
+
+
+HOW TO DO WITH THEM:
+ -----------------------
+|1, cat, chase, dog 	| -> (1, cat) (1, chase) (1, dot)
+|-----------------------|
+|2, dog, hates, rat 	| -> (2, dog) (2, hate) (2, rat)
+|-----------------------|
+|3, cat, chase, cat 	| -> (3, cat) (3, chase) (3, cat)
+|-----------------------|
+|4, cat, hates, cat 	| -> ...
+|-----------------------|
+|5, cat, chase, zebra	| -> 
+|-----------------------|
+|6, dog, hates, dog 	| -> 
+|-----------------------|
+|7, cat, chase, dog 	| -> 
+|-----------------------|
+|8, dog, hates, cat 	| ->
+|-----------------------|
+|.....			|
+
+	| |
+	| |
+	VVV
+	 V
+      
+ -----------------------
+|cat:			|
+| 1,3,3,4..	      	|
+ -----------------------
+
+ -----------------------
+|dog:			|
+|2,6,7	      	 	|
+ -----------------------
+
+ -----------------------
+|chase:			|
+|...	      	 	|
+ -----------------------
+
+ -----------------------
+|hate:			|
+|...	      	 	|
+ -----------------------
+
+ -----------------------
+|chase:			|
+|...	      	 	|
+ -----------------------
+
+
+-----
+Summarize: Web Indexing Generalization
+	Map/transform step:(documents ID) -> (word1, ID) (word2, ID)... 
+	Reduce/aggregate step: group by word and generate a list of ID. 
+======================================================================
+
+
+
+
+
+
+
+======================================================================
+Generalization of Two Examples:
+	Actual Application:
+		Map:
+		Reduce:
+	........
+======================================================================
+
+
+
+
+
+
+5:50pm - 6:30pm
+======================================================================
+One more Hour Study:
+
+
+Log of billions of queries. Count frequency of each query. 
+
+Q: How can we count the frequency of each query?
+Q: How can we parallelize it? 
+
+
+Step 1: (cat, 1) (dog, 1) (cat, 1) (rat, 1)
+Step 2: (cat, 2) (dog, 1) (rat, 1)
+
+Q: How to parallelize the two steps?
+
+In Step 1: each query can be done independent of each other. 
+Thus, they can be done in different machines, independently. 
+
+Summary Step1: For parallel processing. 
+	Split input data into multiple independent chunks. 
+	move each chunk to separate machine 
+	perform transformation on multiple machines in parallel 
+
+---------
+Summary Step 2:For parallel processing 
+	move the tuples with the same query to the same machine 
+	perform aggregation on multiple machine in parallel 
+
+======================================================================
+
+
+
+
+
+
+
+======================================================================
+MapReduce Model:
+
+Programmer provides:
+	Map function:
+	Reduce function:
+
+
+MapReduce handles the res:
+
+Many system exist supporting MapReduce model 
+======================================================================
+
+
+
+
+
+======================================================================
+Hadoop (不学)
+Spark  (学）
+======================================================================
+
+
+
+======================================================================
+Spark：
+	Open source cluster computing infrastructure. 
+
+	Input data is convert into RDD (resilient distributed dataset)
+======================================================================
+
+
+
+======================================================================
+Spark Example: Count Words 
+
+Lines = sc.textFile("input.txt")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,248 @@
+Data stored in Disk pay attention:
+	limiting random I/O
+	penaty paying random is much higher 
+
+
+At the end of today:
+	
+Magnetic system ---> Abstraction by OS
+SSD 	 system ---> Abstraction by OS
+
+Abstraction:
+	no need to worry about head, cylinder, sector .
+	access to non-adjacent blocks, random I/o
+	access to adjacent blocks, sequential I/o
+
+ -------
+|       |
+ -------
+|       |
+ -------
+|       |
+ -------
+|       |
+ -------
+|       |
+ -------
+|       |
+ -------
+|       |
+ -------
+|       |
+ -------
+|       |
+ -------
+
+    ------- 
+one|       |is one block, 
+    -------
+
+To read/write one k or less, we have to deal with the 
+Whole block. 
+
+
+
+The problem now:
+	1. How to store the table to the sequence of blocks. 
+	2. How to efficiently look up the table from the sequence of blocks. 
+
+
+
+File: Main Problem 
+
+
+    ------- 
+   |       |  ===> 512 Byte block 
+    -------   ===> half is 256
+
+
+ ---------------
+|     |    |    |  ===> 80 byte tuple
+ ---------------
+|     |    |    |  ===> 80 byte tuple
+ ---------------
+|     |    |    |  ===> 80 byte tuple
+ ---------------
+
+
+
+Spanned vs Unspanned:
+
+Unspanned:
+ ---------------
+|     T1   | T2 | 
+ ---------------
+|   T2   |   T3 |  
+ ---------------
+|   T3  |\\\\\\\|  
+ ---------------
+
+ ---------------
+|     T4   | T5 | 
+ ---------------
+|   T5   |   T6 |  
+ ---------------
+|   T6  |\\\\\\\|  
+ ---------------
+
+Maximum space wasted for unspanned: less than 50%
+	when the tuple is 257byte, then 255 byte 
+	memory is wasted
+
+
+Spanned:
+ ---------------
+|     T1   | T2 | 
+ ---------------
+|   T2   |   T3 |  
+ ---------------
+|   T3  |  T4   |  
+ ---------------
+
+ ---------------
+| T4  | T5      | 
+ ---------------
+| T5 |   T6     |  
+ ---------------
+|   T7      |T8 |  
+ ---------------
+
+Maximum space wasted for spanned: 
+
+Down side of spanned: 
+		access the data is harder 
+		harder to find the rest of the tuple
+
+
+      
+
+
+Variable-length tuples:
+How to store them:
+
+ ----------
+|     T1   | 
+ ----------
+|   T2   | 
+ ---------
+|   T3  |
+ ----------
+|     T4   | 
+ ----------
+|   T5   | 
+ --------
+|   T6  |
+ -------
+Solution1: reserved the maximum space for each tuple:
+Problem1: a lot of wast.
+Advantage: easy to update the tuples
+
+ -------------------
+|     T1   |\\\\\\\\|  
+ -------------------
+|   T2   |\\\\\\\\\\| 
+ -------------------
+|   T3  |\\\\\\\\\\\| 
+ -------------------
+|     T4   |\\\\\\\\| 
+ -------------------
+|   T5   |\\\\\\\\\\|  
+ -------------------
+|   T6  |\\\\\\\\\\\| 
+ -------------------
+
+
+Variable-length space:
+Solution2: 
+	pack tuple tightly
+	pack as much tuple as possible tuple to one block
+	but don't store one tuple into two blocks
+Problem2:
+	how to know the start and end of the tuple. 
+	read through the block?
+	this is expensive. 
+	solution2-1 for problem2:
+	label the length of the tuple at the beginning of 
+	its location on the block. 
+	jump from one to the other. 
+
+
+	solution2-2 for problem2:
+	label the end of this tuple at the beginning of
+	its ending location on the block. 
+	jump from one to the other. 
+
+
+Problem22: What to do for delete/update?
+	1. Just cross it out. 
+	2. Store new tuple in it.
+		what if it's bigger. 
+		Split?? We barely split the tuple. 
+
+
+	reshuffling and move all allocated space to the 
+	beginning, ---> compact 
+
+	Compassion tuple problem:
+		every thing is shuffled 
+		we need a list of pointer pointing the start
+		
+	
+
+Slotte Page Structure:
+      
+Header 
+--------------------------
+|R1|R2|R3|R4|R5|..|  |    |
+--------------------------
+|R2              |R5      |
+--------------------------
+|R1                       |
+--------------------------
+|R3                       |
+--------------------------
+
+
+
+Long Tuple:
+ProductReview(
+	pid INT, 
+	reviewer VARCHAR(50),
+	date DATE,
+	rating INT, 
+	comments VARCHAR(4000)
+)
+
+    ------- 
+   |       |  ===> 512 Byte block 
+    -------   
+
+
+Don't treat comment as a common attribute 
+Separate it out in a separated file. 
+
+
+
+===========================================
+Column Oriented Storage. 
+
+SELECT name FROM Student WHERE GPA > 3.7
+
+For analytical queries, reading the entire row of a tuple 
+May not be needed.
+
+
+===========================================
+Sequential File:
+
+
+
+
+
+
+
+
+
+
+
+

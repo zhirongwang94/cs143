@@ -1,0 +1,164 @@
+Index:
+
+Topics to Learn:
+	dense index vs sparse index 
+	primary index vs secondary index 
+	(clustering index vs non-clustering index) 
+	tree based vs hash-based index
+
+Tree based index:
+	indexed sequential file 
+	b+ tree
+	
+
+Hash based index:
+	static hashing 
+	extendible hasing
+======================================================
+Basic problem:
+	SELECT * FROM Student WHER sid = 30; 
+
+
+ ---------------
+|sid |name|GPA| | 
+ ---------------
+|20  | S  |3.2  |  
+ ---------------
+|60  | B  |2.1  |  
+ ---------------
+|70  | A  |1.3  |  
+ ---------------
+|40  | E  |2.5  |  
+ ---------------
+|90  | X  |3.6  |  
+ ---------------
+|30  | B  |2.7  |  
+ ---------------
+
+How can we answer the query?
+	from the beginning of the tuple, then read the sid
+	one tuple by one tuple. 
+	terribly slow. 
+
+
+Sequential File:	Binary Search: log2(N)
+ ---------------
+|sid |name|GPA| | 
+ ---------------
+|20  | S  |3.2  |  
+ ---------------
+|30  | B  |2.7  |     <-- 2
+ ---------------
+|40  | E  |2.5  |     <-- 1
+ ---------------
+|60  | B  |2.1  |  
+ ---------------
+|70  | A  |1.3  |  
+ ---------------
+|90  | X  |3.6  |  
+ ---------------
+
+
+Jumping around the blocks 
+
+Any better way?
+
+======================================================
+
+Hash table: Index 
+
+
+
+	    /. 
+Index 30   / |
+-----------HT|---------
+	   \ |	       |	
+	    \.         |	  ---------------------
+                        -------> |30| ....
+				  ---------------------
+
+
+=======================================================
+Dense, Primary Index 
+	
+Primary index(clustering index)
+	index on the search key
+
+Dense Index 
+	(key, pointer) pair for every record 
+
+Find the key from index and follow pointer 
+	maybe through binary search 
+
+Why dense index?
+	Isn't binary search on the file same?
+
+	ex: 
+		100,000,000 tuple (900 bytes/tuple)
+		4-bytes search key, 4-byte pointer 
+		4096-byte block, unspanned tuples. 
+		I need 25M blocks 
+
+		4096/(4byte for key+4byte for pointer) 
+					= 512 entry/block
+		195.313 blocks are needed. 
+		jumping around is so cheap. 
+
+		
+
+Advantage: index table is smaller, so jumping around is cheaper. 
+
+
+
+
+
+=======================================================
+Spare, Primary Index:
+	Spare Index:
+		(key, pointer) pair per every block 
+		(key, pointer) pair points to the first tuple in the block 
+
+
+Sparse Index: 
+ ---------------                      ---------------------
+|10  | pinter   |----------------->  |10| ....
+ ---------------            |         ---------------------
+|40  | pinter   |	    |	      ---------------------
+ ---------------            +------> |20| ....
+|70  | pinter   |	    |	      ---------------------
+ ---------------	    |	
+|100 | pinter   |	    +------> .....
+ ---------------
+
+
+=======================================================
+Multiple level index:
+	1+ more level in spare primary index. 
+
+=======================================================
+Secondary (non-clustering) index:
+	when tuples in the table are not ordered 
+	by the index search key
+		index on a non-search-key for sequential file 
+		unordered file 
+
+	why index?
+		does sparse index make sense ?
+		Answer: no 
+			first level must be always dense
+			sparse form second level 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

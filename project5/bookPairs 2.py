@@ -13,99 +13,101 @@ spark = SparkSession(sc)
 
 
 
-
-############################################################
-# read the data file to a RDD object
-lines = sc.textFile("/home/cs143/data/goodreads.user.books")
-# lines = sc.textFile("/home/cs143/data/newFile")
-# lines.collect()
-
-# split the line RDDs into (userID, [book1, book2...]) tuple RDDs
-# output: [['1', '950,963'], ['2', '1072,1074,1210'], ['3', '1488']...]
-userID_bookIDs = lines.map(lambda line: line.split(":"))
-# userID_bookIDs.collect()
-
-# split the bookIDs
-# output: [('1', ['950', '963']), ('2', ['1072', '1074', '1210']), ('3', ['1488'])]
-bookIDs_byUser = userID_bookIDs.map(lambda userID_bookID: (userID_bookID[0], userID_bookID[1].split(",")))
-# bookIDs_byUser.collect()
+rdd = sc.textFile("goodreads.user.books").map(lambda line: line.split(":")).map(lambda user_books: (user_books[0], user_books[1].split(",")))
+# >>> rdd.collect()
+# ['1:950,963', '2:1072,1074,1210', '3:1488', '4:996,1072,1074']
 
 
-# convert bookIDs_byUser RDD to Dataframe
-# output:
-# +------+------------------+
-# |userID|           bookIDs|
-# +------+------------------+
-# |     1|        [950, 963]|
-# |     2|[1072, 1074, 1210]|
-# |     3|            [1488]|
-# +------+------------------+
-df = bookIDs_byUser.toDF(["userID","bookIDs"])
-# df.show()
+rdd1 = readFile.map(lambda line: line.split(":"))
+# >>> rdd1.collect()
+# [['1', '950,963'], ['2', '1072,1074,1210'], ['3', '1488'], ['4', '996,1072,1074']]
 
-# filter out the tuple where there is only one bookID in the bookIDs field
-# output:
-# +------+------------------+
-# |userID|           bookIDs|
-# +------+------------------+
-# |     1|        [950, 963]|
-# |     2|[1072, 1074, 1210]|
-# +------+------------------+
-filtered_df = df.where(size(col("bookIDs")) > 1)
-# to avoid the error caused by no paire 
-# filtered_df.show()
-
-# convert the data frame back to rdd
-# output: [('1', ['950', '963']), ('2', ['1072', '1074', '1210'])]
-filtered_rdd = filtered_df.rdd 
-filtered_rdd = filtered_rdd.map(lambda row: (row[0], row[1]))
-# filtered_rdd.collect()
+rdd2 = rdd1.map(lambda user_books: (user_books[0], user_books[1].split(",")))
+# >>> rdd2.collect()
+# [('1', ['950', '963']), ('2', ['1072', '1074', '1210']), ('3', ['1488']), ('4', ['996', '1072', '1074'])]
 
 
-# pairing up the bookIDs by userID
-# output:
-# [(('950', '963'), 1), (('1074', '1072'), 1), (('1210', '1072'), 1), (('1074', '1210'), 1)]
-def getPairs(a):
-	bookIDs = a[1]
-	combos = list(combinations(bookIDs,2))
-	pairs = []
-	for i in combos:
-		pairs.append((i,1))
-	return pairs
+df = rdd2.toDF()
+# >>> df.show()
+# +---+------------------+
+# | _1|                _2|
+# +---+------------------+
+# |  1|        [950, 963]|
+# |  2|[1072, 1074, 1210]|
+# |  3|            [1488]|
+# |  4| [996, 1072, 1074]|
+# +---+------------------+
 
-booksIDPairs1s = filtered_rdd.flatMap(lambda a: getPairs(a))
-# booksIDPairs1s.collect()
+
+df1 = df.where(size(col("_2")) >= 2)
+# >>> df1.show()
+# +---+------------------+
+# | _1|                _2|
+# +---+------------------+
+# |  1|        [950, 963]|
+# |  2|[1072, 1074, 1210]|
+# |  4| [996, 1072, 1074]|
+# +---+------------------+
 
 
 
-# sum up, no need to use set, since the bookID are sorted  
-# output:
-# [(('1072', '1074'), 1), (('950', '963'), 1), (('1072', '1210'), 1), (('1074', '1210'), 1)]
-booksIDPairCount = booksIDPairs1s.reduceByKey(lambda a, b: a+b)
-# booksIDPairCount.collect()
+# convert df back to rdd 
+rdd3 = df1.rdd.map(lambda field: (field[0], field[1]))
+# >>> rdd3.collect()
+# [('1', ['950', '963']), ('2', ['1072', '1074', '1210']), ('3', ['1488']), ('4', ['996', '1072', '1074'])]
+
+
+rdd4 = rdd3.map(lambda a: a[1])
+# >>> rdd4.collect()
+# [['950', '963'], ['1072', '1074', '1210'], ['1488'], ['996', '1072', '1074']]
+
+rdd5 = rdd4.flatMap(lambda books: list(combinations(books,2)))
+# >>> rdd5.collect()
+# [('950', '963'), ('1072', '1074'), ('1072', '1210'), ('1074', '1210'), ('996', '1072'), ('996', '1074'), ('1072', '1074')]
+
+
+rdd6 = rdd5.map(lambda a: (a, 1))
+# >>> rdd6.collect()
+# [(('950', '963'), 1), (('1072', '1074'), 1), (('1072', '1210'), 1), (('1074', '1210'), 1), (('996', '1072'), 1), (('996', '1074'), 1), (('1072', '1074'), 1)]
+
+
+rdd7 = rdd6.reduceByKey(lambda a, b: a+b)
+# >>> rdd7.collect()
+# [(('1072', '1074'), 2), (('996', '1072'), 1), (('996', '1074'), 1), (('950', '963'), 1), (('1072', '1210'), 1), (('1074', '1210'), 1)]
 
 
 
-# filter out pairs whose counts less than 20
-# output:
-# +-----------+------+
-# |bookID_Pair|counts|
-# +-----------+------+
-# |..		  |21    |
-# +-----------+------+
-df = booksIDPairCount.toDF(["bookID_Pair", "counts"])
-# df.show()
+df2 = rdd7.toDF()
+# >>> df2.show()
+# +------------+---+
+# |          _1| _2|
+# +------------+---+
+# |[1072, 1074]|  2|
+# | [996, 1072]|  1|
+# | [996, 1074]|  1|
+# |  [950, 963]|  1|
+# |[1072, 1210]|  1|
+# |[1074, 1210]|  1|
+# +------------+---+
 
-df = df.filter(df.counts > 20 )
-# df.show()
+
+df3 = df2.filter(df2._2 >= 20 )
+# >>> df3 = df2.filter(df2._2 >= 2 )
+# >>> df3.show()
+# +------------+---+
+# |          _1| _2|
+# +------------+---+
+# |[1072, 1074]|  2|
+# +------------+---+
+# it works
 
 
-# convert the data frame back to RDD
 
-rdd = df.rdd 
-rdd = rdd.map(lambda row: ( (row[0][0], row[0][1]), row[1]))
+# convert df to rdd, and save it
+rdd8 = df3.rdd.map(lambda row: ( (row[0][0], row[0][1]), row[1]))
 rdd.saveAsTextFile("output")
-# rdd.collect()
 
 
-  
+
+
+

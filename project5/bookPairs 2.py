@@ -52,6 +52,7 @@ df = bookIDs_byUser.toDF(["userID","bookIDs"])
 # |     2|[1072, 1074, 1210]|
 # +------+------------------+
 filtered_df = df.where(size(col("bookIDs")) > 1)
+# to avoid the error caused by no paire 
 # filtered_df.show()
 
 # convert the data frame back to rdd

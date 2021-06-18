@@ -1,0 +1,13 @@
+
+#q3:
+
+Since all modifications we are dealing with are deletions, RI violation will occur only when we delete from a referenced table. A and B are referenced table. Let's analyze them separately. 
+
+Deleting from B won't cause violate since the dangling tuples in B have been dealt with by the "ON DELETE SET NULL" statement.
+
+
+Table B, C, and D are all referencing to table A. Table B's reference to Table A won't cause a RI violation since it's been dealt with by the "REFERENCES A(w) ON DELETE SET NULL" statement. However. The reference from table C to table A and from table D to table A might cause RI violation since the dangling tuples in C and D are not dealt with after deleting from A. 
+
+Thus, "DELETE FROM C" must happen before "DELETE FROM A", and "DELETE FROM D" must happen before  "DELETE FROM A". 
+
+Thus,  II and III works, I doesn't work. 

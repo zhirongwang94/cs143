@@ -1,0 +1,42 @@
+
+
+I have done 3 projects on embedded system. The first one was an Arduino. Basically, I built auto car that can atomically move following the black lines, the the LED lights on the car can also blink in some specific pattern according to what moving situation of the car. The most changing part of this project was to make the car move stably. And to do that, I have to use some integral calculations using the data from the sensors. 
+
+My second project was a FPGA project. I build a video game on FPGA. 
+It is not a large video game, but it has several thousand line of code since we use verilog to build it, and I integrated a lot of features of FPGA board.   And  us I use VGA to display the images, I used 7-segment led light to display the playing score. I use the joystick and buttons to control the moving, and I also load some music on it. The interesting part of this project is the verilog study. It's different from the high level language. Many tasks have to 
+
+
+My third project was a beagleBone project. I use c language for this project. 
+
+
+I also have experience of parallel programming using c++. I studied the openMl library to handle the large matrix to improve the performance of matrix calculations. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Share an example of how your academic, professional experience have prepare you for this opportunity?
+
+As I have mentioned, I am a cs student. I have the knowledge of programming, algorithm, data strucutes, and so on. I like programming. And I also like to deal with hardware and circuits. Right now we study at home because of the pandemic. But when I was living in dorm in our School. There is a workshop-space for all kind of interesting engineering projects. Some are a lot of tools that we can use. There are 3-d printers, 3d scanner, sew, all kinds of circuit components. Some students work on their project there, and I like to playing with tools there in my spare time. I like to build circuit with and program with other people in that space. 
+
+And also, I have a strong sense of math and physics. I used to work as a part-time math/physics tutor in a city college. My job duty is to help students understand the concepts of the math and physics, and to lead them to solve the difficult problems from class. I think the sense of math of physics give me some inspiration when implement something in a program. 
+
+
